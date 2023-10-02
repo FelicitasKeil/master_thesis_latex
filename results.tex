@@ -1,0 +1,9 @@
+
+
+To get a frequency-dependent angular power spectrum from {\tt Multi\_CLASS}, we implemented a frequency-dependent window function (see \ref{window_fct_section}) and evolution bias (see \ref{evo_bias_section}). Using this, we can choose a measured GW frequency as an input parameter and compute the angular power spectrum.
+
+We then extended the {\tt CLASS} code to also include the dipole l=1, which I also changed in {\tt Multi\_CLASS}.
+\section{Frequency Dependent AGWB Angular Power Spectrum}
+\section{AGWB vs. Noise}
+For the noise angular power spectrum, we assume Gaussian noise using the best anisotropic noise sensitivity for ET and CE using cross-correlations (at $l=1$). This is a very optimistic assumption. The computed $C_l$ used for the separation reach up to $l=30$. Looking at Fig. \ref{ET_Cl}, our assumed noise curve would have the shape of $l+\frac{1}{2}$ up to $l=30$, which would increase more slowly than the actual sensitivity curve. 
+\section{CGWB vs. Noise}

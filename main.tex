@@ -1,0 +1,120 @@
+\documentclass[twoside, 11pt, openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,bindingoffset=0.3in,%
+            left=1in,right=1in,top=2cm,bottom=1cm,%
+            footskip=2cm]{geometry}
+\usepackage[sorting=none, style=authoryear, backend=biber]{biblatex} 
+%\usepackage[backend=biber, style=numeric,]{biblatex}
+\addbibresource{GWBG_Master_v6.bib}
+%\bibliography{GWBG_Master_v2}
+%\bibliographystyle{ieeetr}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyhdr} % header package
+%\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\usepackage[colorlinks=true,linkcolor=ForestGreen, citecolor=ForestGreen]{hyperref}%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tocloft}
+\usepackage{subfig}
+\usepackage{textcomp}
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{url} %url line breaks
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{xspace}
+\usepackage[toc,page]{appendix}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\usepackage[T1]{fontenc}
+\usepackage{xr}
+
+%\renewcommand{\chapterheadstartvskip}{\vspace{1cm}}
+\let\chaptername\relax
+\def\UrlBreaks{\do\/\do-}
+\pagestyle{plain}
+\renewcommand{\baselinestretch}{1}
+\setlength\headheight{20pt}
+\addtolength{\textheight}{-80.0pt} 
+\hypersetup{urlcolor=ForestGreen}
+            
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+                
+%\frontmatter
+
+\chapter*{Abstract}
+\subfile{abstract.tex}
+
+\newpage
+\begin{spacing}{1}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\end{spacing}
+\newpage
+
+%\mainmatter
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{}
+\fancyhead[L]{\MakeUppercase{\chaptername\ \thechapter\ --\ \leftmark} \newline
+                \vspace{-0.7cm}
+                \noindent\rule{\linewidth}{0.4pt}}
+\pagenumbering{arabic}
+\chapter{Introduction}
+\subfile{introduction.tex}
+
+\chapter{Gravitational Waves}
+\label{gw_chapter}
+\subfile{gw.tex}
+
+\chapter{Frequency Dependence of the AGWB}
+\label{frequency_chapter}
+\subfile{frequency.tex}
+
+\chapter{Component Separation Methods}
+\label{comp_sep}
+\subfile{separation.tex}
+
+\chapter{Information Field Theory}
+\label{ift_chapter}
+\subfile{ift.tex}
+
+\chapter{Results}
+\label{results_chapter}
+\subfile{results.tex}
+
+\chapter{Conclusion \& Outlook}
+\label{conclusion_chapter}
+\subfile{conclusion.tex}
+
+\appendix
+%\addcontentsline{toc}{chapter}{Appendix}
+\subfile{appendices.tex}
+
+
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\subfile{acknowledgements.tex}
+
+% \clearpage
+
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+%\AtNextBibliography{\scriptsize}
+\printbibliography
+
+
+\end{document}

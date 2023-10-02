@@ -1,0 +1,92 @@
+Since the noise in GW detectors is very high, especially compared to the GW background, it makes sense to use powerful methods to separate the signal from the noise. One promising method is information field theory (IFT).
+\\
+\textit{change style:}
+\\
+Dr Torsten Enßlin from the Max Planck Institute in Garching gave a lecture about 
+information field theory (IFT) in 2022. From that script, I read chapters 6 through 11. 
+I also watched his talk, where he applied IFT to different problems, like the
+tomography of the Milky Way.  The idea is to use Bayesian statistics to reconstruct 
+a signal from data which contains noise. His group also developed a Python package, 
+called nifty, which we can use. This can also be used on the gravitational wave 
+background as a tool to separate it from shot noise.
+
+
+Information field theory is a technique for signal reconstruction
+and field inference designed by Torsten Enßlin and his group at the 
+MPI in Garching.
+Its goal is to use a formalism similar to the one used in Quantum Field
+Theory to be able to reuse methods to infer fields from data. The problem
+at the base is, that we want to infer a spatially continuously distributed field
+from a finite amount of data. To do that, we can add our knowledge about 
+physical laws, statistics, etc. of the problem, in the form of correlation functions.
+
+We need to define our probability density functions over the space of all
+possibilities, which is why we will integrate using path integrals in 
+this formalism.
+
+If we assume a linear measurement, our data consists of the signal modified by a response function and added noise.
+
+\begin{equation}
+    \underbar{d} = R\underbar{s} +\underbar{n}
+\end{equation}
+\begin{equation}
+    (R\underbar{s})_i = \int dx R_{ix} s_{x}
+\end{equation}
+The response corresponds to the point spread function (PSF) of our instrument and
+other linear operations performed on the data.
+
+With Gaussian noise, we get the following likelihood:
+\begin{equation}
+    P(d|s) = \mathcal{N}(d-Rs, N) .
+\end{equation}
+
+\section{Information Hamiltonian}
+
+Using Bayes theorem, we define what is called an information Hamiltonian.
+\begin{equation}
+    P(s|d) = \frac{P(d|s)P(s)}{P(d)}
+\end{equation}
+    
+\begin{equation}
+    = \frac{e^{-\mathcal{H}(d, s)}}{Z_d}
+\end{equation}
+
+Here, $Z_d$ is the partition function, which is the evidence here.
+\begin{equation}
+    Z_d = P(d)
+\end{equation}
+\begin{equation}
+        \mathcal{H}(d, s) = -ln(P(d|s)) - ln(P(s))
+\end{equation}
+
+\section{Linear Filter}
+\subsection{Wiener Filter}
+For a Gaussian prior and a Gaussian signal, we obtain the following
+Hamiltonian.
+\begin{equation}
+    \mathcal{H}(d, s) = \frac{1}{2}(d-Rs)^{\dagger}N^{-1}(d-Rs)+\frac{1}{2}s^{\dagger}S^{-1}s
+\end{equation}
+
+With quadratic completion, we can rewrite this in canonical form.
+\begin{equation}
+    \mathcal{H}(d, s) = \frac{1}{2}(s-m)^\dagger D^{-1}(s-m)
+\end{equation}
+When applying the covariance to the source, we get the mean according to the Wiener filter.
+\begin{equation}
+    m = Dj
+\end{equation}
+\begin{equation}
+    D =(S^{-1}+R^{\dagger}N^{-1}R)^{-1}
+\end{equation}
+\begin{equation}
+    j =R^{\dagger}N^{-1}d
+\end{equation}
+The covariance can also be written with the signal and the mean:
+\begin{equation}
+    D=\langle (s-m)(s-m)^\dagger \rangle_{s|d}
+\end{equation}
+Then, the posterior of the Wiener filter is a Gaussian distribution with mean $s-m$ and the earlier-mentioned covariance.
+\begin{equation}
+    P(s|d)=\mathcal{N}(s-m, D)
+\end{equation}
+
