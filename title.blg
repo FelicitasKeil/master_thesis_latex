@@ -1,9 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[0] Config.pm:307> INFO - Logfile is 'title.blg'
-[43] biber:322> INFO - === Mi Sep 27, 2023, 17:16:56
-[53] Biber.pm:415> INFO - Reading 'title.bcf'
-[92] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[96] Utils.pm:293> WARN - The file 'title.bcf' does not contain any citations!
-[102] bbl.pm:652> INFO - Writing 'title.bbl' with encoding 'UTF-8'
-[102] bbl.pm:755> INFO - Output to title.bbl
-[102] Biber.pm:128> INFO - WARNINGS: 1

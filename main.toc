@@ -1,6 +1,8 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\nobreakspace {}\hfill \textbf {Page}\par 
+\contentsline {chapter}{List of Abbreviations}{ii}{chapter*.2}%
+\defcounter {refsection}{0}\relax 
+\nobreakspace {}\hfill \par 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -8,84 +10,78 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Fundamentals}{2}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Sources}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Sources}{4}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Binary Black Hole Mergers}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Binary Black Hole Mergers}{4}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Stochastic Background}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Stochastic Background}{6}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Astrophysical}{4}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Astrophysical}{6}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dipole}{5}{equation.2.3.17}%
+\contentsline {subsubsection}{Dipole}{6}{equation.2.3.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Cosmological}{5}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Cosmological}{7}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Primordial Black Holes}{5}{subsection.2.3.2}%
+\contentsline {subsubsection}{Primordial Black Holes}{7}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Inflation}{5}{subsection.2.3.2}%
+\contentsline {subsubsection}{Inflation}{7}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Phase Transitions}{6}{equation.2.3.24}%
+\contentsline {subsubsection}{Phase Transitions}{8}{equation.2.3.38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Number Density Distribution}{6}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.3}Number Density Distribution}{8}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}Projection Effects}{6}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.4}Projection Effects}{8}{subsection.2.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Frequency Dependence of the AGWB}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Frequency Dependence of the AGWB}{11}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Energy Spectrum}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Energy Spectrum}{12}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Merger Rate}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Merger Rate}{14}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Star Formation Rate}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Star Formation Rate}{15}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}\textsc {UniverseMachine}}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}\textsc {UniverseMachine}}{15}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Halo Mass Function}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Halo Mass Function}{17}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Press-Schechter Formalism}{14}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.1}Press-Schechter Formalism}{17}{subsection.3.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Window Function}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Window Function}{18}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Evolution Bias}{15}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Evolution Bias}{20}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Magnification Bias}{16}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Magnification Bias}{20}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Component Separation Methods}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Component Separation Methods}{21}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Instrumental Noise}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Instrumental Noise}{21}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}LIGO, Virgo \& KAGRA}{17}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}LIGO, Virgo \& KAGRA}{21}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Einstein Telescope \& Cosmic Explorer}{17}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Einstein Telescope \& Cosmic Explorer}{21}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}LISA \& TianQin}{18}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.3}LISA \& TianQin}{22}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Internal Linear Combination}{21}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Information Field Theory}{25}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}AGWB Dipole}{21}{subsection.4.2.1}%
+\contentsline {section}{\numberline {5.1}Information Hamiltonian}{26}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Matched Filtering}{21}{section.4.3}%
+\contentsline {section}{\numberline {5.2}Linear Filter}{26}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Information Field Theory}{22}{chapter.5}%
+\contentsline {subsection}{\numberline {5.2.1}Wiener Filter}{26}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Information Hamiltonian}{23}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Results}{27}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Linear Filter}{23}{section.5.2}%
+\contentsline {section}{\numberline {6.1}Frequency Dependent AGWB Angular Power Spectrum}{27}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Wiener Filter}{23}{subsection.5.2.1}%
+\contentsline {section}{\numberline {6.2}AGWB vs. Noise}{27}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Results}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.3}CGWB vs. Noise}{27}{section.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Frequency Dependent AGWB Angular Power Spectrum}{24}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Conclusion \& Outlook}{28}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}AGWB vs. Noise}{24}{section.6.2}%
+\contentsline {chapter}{List of Figures}{29}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}CGWB vs. Noise}{24}{section.6.3}%
+\contentsline {chapter}{Acknowledgements}{30}{appendix*.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusion \& Outlook}{25}{chapter.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{26}{chapter.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{26}{chapter.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{27}{chapter.7}%
+\contentsline {chapter}{Bibliography}{31}{appendix*.22}%

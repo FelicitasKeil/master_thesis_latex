@@ -51,18 +51,58 @@
 \DeclareUnicodeCharacter{2212}{-}
 
 \begin{document}
-
-                
 %\frontmatter
+\pagenumbering{roman}
 
 \chapter*{Abstract}
-Context, aims, methods, results
 \subfile{abstract.tex}
+
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+
+\begin{table}[h]
+        \begin{tabular}{l l}
+            \textbf{AGWB} & Astrophysical Gravitational Wave Background
+            \\
+            \textbf{BBH} & Binary Black Hole
+            \\
+            \textbf{BH} & Black Hole
+            \\
+            \textbf{CE} & Cosmic Explorer
+            \\
+            \textbf{CGWB} & Cosmological Gravitational Wave Background
+            \\
+            \textbf{CLASS} & Cosmic Linear Anisotropy Solving System 
+            \\
+            \textbf{ET} & Einstein Telescope
+            \\
+            \textbf{GW} & Gravitational Wave
+            \\
+            \textbf{GWTC} & Gravitational Wave Transient Catalogue
+            \\
+            \textbf{HMF} & Halo Mass Function
+            \\
+            \textbf{IFT} & Information Field Theory
+            \\
+            \textbf{KAGRA} & Kamioka Gravitational Wave Detector
+            \\
+            \textbf{LIGO} & Laser Interferometer Gravitational-Wave Observatory
+            \\
+            \textbf{NANOGrav} & North American Nanohertz Observatory for Gravitational Waves
+            \\
+            \textbf{NIFTy} & Numerical Information Field TheorY
+            \\
+            \textbf{NS} & Neutron Star
+            \\
+            \textbf{SFR} & Star Formation Rate
+
+        \end{tabular}
+\end{table}
 
 \newpage
 \begin{spacing}{1}
 \tableofcontents
-\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\addtocontents{toc}{~\hfill\par}
 \end{spacing}
 \newpage
 
@@ -105,8 +145,7 @@ Context, aims, methods, results
 %\addcontentsline{toc}{chapter}{Appendix}
 \subfile{appendices.tex}
 
-
-
+\chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \subfile{acknowledgements.tex}
 
