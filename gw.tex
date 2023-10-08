@@ -1,5 +1,5 @@
 \section{Fundamentals}
-Gravitational Waves (GW) are oscillations in spacetime, similar to electromagnetic
+GW are oscillations in spacetime, similar to electromagnetic
 waves. We can start with the Einstein equation:
 
 \begin{equation}
@@ -35,9 +35,12 @@ We can solve the differential equation with the trace reverse tensor.
 
 \begin{equation}
     \bar{h}_{\mu\nu} = h_{\mu\nu}-\frac{1}{2} \eta_{\mu\nu}h
+    \label{trace_reverse}
 \end{equation}
 
 Here, $h$ is the trace of $h_{\mu\nu}$.
+
+\subsection{Wave Equation}
 
 If we want to describe the transport of energy and momentum by GW analytically, we can assume an asymptotically flat environment since the detector is at a far distance from the source. Then, we will consider Newtonian binaries in a circular orbit and only look at the non-relativistic regime. This will limit us to the inspiral phase, see Fig. \ref{GW_waveform} since the non-relativistic approximation only applies in that phase. Later though, we will see that for the implementation in the {\tt CLASS} code all the phases need to be modelled.
 
@@ -47,7 +50,14 @@ The linear perturbation $h_{\mu\nu}$ is a dimensionless bosonic tensor field and
     \square h_{\mu\nu} -\partial_mu \partial^\lambda h_{\lambda\nu}-\partial_\nu\partial^\lambda h_{\lambda\mu}+\partial_\mu \partial_\nu h - \eta_{\mu\nu}(\square h-\partial^\kappa \partial^\lambda h_{\kappa\lambda})=-\kappa T_{\mu\nu}
 \end{equation}
 
-Using the de Donder gauge, we can simplify this field equation.
+For the gauge transformation, we can impose the de Donder gauge condition:
+
+\begin{equation}
+    \partial^\mu h_{\mu\nu} = \frac{1}{2}\partial_\nu h_\mu^\mu .
+    \label{de_donder}
+\end{equation}
+
+This simplifies the wave equation to the following form with the trace reverse tensor (\ref{trace_reverse}).
 
 \begin{equation}
     \partial^\mu \underline{h}_{\mu\nu}=0
@@ -68,6 +78,8 @@ We can also choose $h$ to be traceless, which leads to $h$ and $\underline{h}$ c
 \begin{equation}
     \Rightarrow \underline{h} = \underline{h}_{\ \mu}^\mu =0
 \end{equation}
+
+\subsection{Free Field Modes}
 
 Now, we can perform a Fourier decomposition of the linear perturbation.
 
@@ -119,7 +131,7 @@ To illustrate plus and cross polarisations, Fig. \ref{polarisation} shows both o
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{Images/polarisations.png}
-    \caption{Illustration of the plus and cross polarisations varying with time.}
+    \caption{Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.}
     \label{polarisation}
 \end{figure} 
 
@@ -142,8 +154,83 @@ following way:
     L(t) = L_0 + \frac{h_+ L_0}{2} cos(\omega t).
 \end{equation}
 
+\subsection{Quadrupole Wave Emission}
+If we have a source in a finite region of space, we can use the retardated Green's function to solve the wave equation. This is because the waves are causally related to the source $t> |\vec{x}'-\vec{x}|$.
+
+\begin{equation}
+    \square \underline{h}_{\mu\nu}=-\kappa T_{\mu\nu}
+\end{equation}
+
+\begin{equation}
+    \Rightarrow \underline{h}_{\mu\nu}(\vec{x}, t) = \frac{\kappa}{4\pi} \int d^3 x' \frac{T_{\mu\nu}(\vec{x}', t-|\vec{x}'-\vec{x}|)}{|\vec{x}'-\vec{x}|}
+\end{equation}
+
+Then, we can assume that we are in the far field regime, such that $|\vec{x}| \gg |\vec{x}'|$.
+
+\begin{equation}
+    r:= |\vec{x}| \approx |\vec{x}'-\vec{x}|
+\end{equation}
+
+\begin{equation}
+    \Rightarrow \underline{h}_{\mu\nu}(\vec{x}, t) = \frac{\kappa}{4\pi r} \int d^3 x' T_{\mu\nu}(\vec{x}', t-r)
+\end{equation}
+
+If we consider a localised source, the solution does not have a dynamical time component, i.e. $\partial_0 h_{0j} = 0$ (\cite{van_holten_gravitational_2019}).
+Additionally to the de Donder gauge (\ref{de_donder}), we will now impose the traceless-transverse (TT) gauge, which implies transversality.
+
+\begin{equation}
+    r_i \underline{h}_{ij} = 0
+\end{equation}
+
+\begin{equation}
+    h_{ii} = 0
+\end{equation}
+
+This gives us the following solution which is valid at a large distance in empty space.
+
+\begin{equation}
+    \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{4\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\left(I_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{I} \; \vec{r}\right)
+\end{equation}
+
+$I_{ij}$ is the quadrupole moment of the total energy density:
+
+\begin{equation}
+    I_{ij}(t-r)= \int d^3x' \left(T_{ij} -\frac{1}{3}\delta_{ij}T_{kk} \right)T_{00}(\vec{x}', t-r) .
+\end{equation}
+
+\begin{equation}
+    = \frac{1}{2} \partial_0^2 \int d^3x' \left(x_i' x_j' -\frac{1}{3}\delta_{ij}\vec{x}'^2 \right)T_{00}(\vec{x}', t-r) .
+\end{equation}
+
+The last equation follows since the time derivative is equal to the derivative with respect to the retardated time $u=t-r$.
+
+\begin{equation}
+    \partial_0 = \partial_u
+\end{equation}
+\begin{equation}
+    \Rightarrow \partial_0^2T_{00}(\vec{x}', u) = \partial_0 \partial_i' T_{i0}(\vec{x}', u) = \partial_i'\partial_j' T_{ij}(\vec{x}', u)
+\end{equation}
+As mentioned earlier, we can perform a non-relativistic approximation for the inspiral phase. In this case, the energy density is dominated by the mass density. We can thus rewrite $\underline{h}_{ij}$ with the mass quadrupole moment. 
+
+
+\begin{equation}
+    I_{ij}=\frac{1}{2}\frac{\partial^2 Q_{ij}}{{\partial t^2}}
+\end{equation}
+
+\begin{equation}
+    Q_{ij}(t-r)=\frac{1}{2} \int d^3x' \left(x_i' x_j' -\frac{1}{3}\delta_{ij}\vec{x}'^2 \right)\rho(\vec{x}', t-r)
+\end{equation}
+
+GW cannot form from a dipole mass distribution since that would require negative masses. However, if we have a quadrupole distribution with vacuum and masses (like a binary black hole for example), GW can be created.
+
+The wave field for non-relativistic sources is thus:
+
+\begin{equation}
+    \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{8\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\frac{\partial^2}{\partial t^2}\left(Q_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{Q} \; \vec{r}\right)
+\end{equation}
+
 \section{Sources}
-Gravitational Waves can be created by different sources. These can be
+GW can be created by different sources. These can be
 merging binaries, bursts (e.g. from core-collapse supernovae), continuous waves 
 (e.g. from pulsars) and a stochastic background (see below).
 
@@ -215,12 +302,12 @@ This is compatible with zero, but an anisotropic background would indicate
 a more interesting cosmology, which is why it would be important to disentangle
 any anisotropic that could be observed.
 
-The astrophysical GW background was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as accurate clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a gravitational wave background. 
+The AGWB was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as accurate clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a GW background. 
 The NANOGrav experiment used a frequency range of $10^{7.5} - 10^{8.75}$ Hz. They assumed a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes. \cite{phinney_practical_2001}
 Using this, they find an integrated energy density $\Omega_{GW} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}$.
 
 \subsubsection{Dipole}
-The cosmological principle says, that the universe is isotropic and homogeneous on large scales. Gravitational Waves are one mode of testing this further. If we find anisotropies in the GW background, other than the kinematic dipole and shot noise, this would be evidence against the principle.
+The cosmological principle says, that the universe is isotropic and homogeneous on large scales. GW are one mode of testing this further. If we find anisotropies in the GW background, other than the kinematic dipole and shot noise, this would be evidence against the principle.
 The kinematic dipole arises from the observer motion with respect to the large-scale structure rest frame. More GW events should be detected in the direction in which we move, and fewer in the opposite direction. Shot noise comes from stochastic fluctuations in the background, which follow a Poisson distribution.
 
 The GW density contrast can be written with an integration over the window function, which weights the contributions in the redshift domain.
@@ -235,7 +322,7 @@ The GW density contrast can be written with an integration over the window funct
 ...
 \subsection{Cosmological}
 The major contributions to the cosmological GW background are primordial
-black holes and gravitational waves from phase transitions and inflation.
+black holes and GW from phase transitions and inflation.
 Schulze et al. \cite{schulze_gw_class_2023} computed the angular power spectrum 
 of this background using a modified version of CLASS\cite{blas_cosmic_2011}.
 \subsubsection{Primordial Black Holes}

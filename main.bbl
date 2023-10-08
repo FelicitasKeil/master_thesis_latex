@@ -750,6 +750,64 @@
       \endverb
       \keyw{General Relativity and Quantum Cosmology,Astrophysics - High Energy Astrophysical Phenomena}
     \endentry
+    \entry{van_holten_gravitational_2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82081f29093ef57de6a5a17676896413}{%
+           family={Holten},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{82081f29093ef57de6a5a17676896413}
+      \strng{fullhash}{82081f29093ef57de6a5a17676896413}
+      \strng{bibnamehash}{82081f29093ef57de6a5a17676896413}
+      \strng{authorbibnamehash}{82081f29093ef57de6a5a17676896413}
+      \strng{authornamehash}{82081f29093ef57de6a5a17676896413}
+      \strng{authorfullhash}{82081f29093ef57de6a5a17676896413}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{I review the elementary theory of gravitational waves on a Minkowski background and the quadrupole approximation. The modified conservation laws for energy and momentum keeping track of the gravitational-wave flux are presented. The theory is applied to two-body systems in bound and scattering states subject to newtonian gravity generalized to include a 1/r3 force allowing for orbital precession. The evolution of the orbits is studied in the adiabatic approximation. From these results I derive the conditions for capture of two bodies to form a bound state by the emission of gravitational radiation.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{00158208}
+      \field{journaltitle}{Fortschritte der Physik}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{Fortschr. Phys.}
+      \field{title}{Gravitational waves from generalized newtonian sources}
+      \field{urlday}{11}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{volume}{67}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1800083}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1002/prop.201800083
+      \endverb
+      \verb{eprint}
+      \verb 1809.05670 [astro-ph, physics:gr-qc]
+      \endverb
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/4T4N3EZF/van Holten - 2019 - Gravitational waves from generalized newtonian sou.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/9IEPNPQM/1809.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1809.05670
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1809.05670
+      \endverb
+      \keyw{General Relativity and Quantum Cosmology,Astrophysics - Solar and Stellar Astrophysics}
+    \endentry
     \entry{the_ligo_scientific_collaboration_population_2022}{misc}{}
       \name{author}{1637}{}{%
         {{un=0,uniquepart=base,hash=450a0f499f7824c81b66c0a5651fd889}{%
@@ -10608,8 +10666,8 @@
       \strng{authorbibnamehash}{c8ea6c12705dd8e43d4308eabfaeef62}
       \strng{authornamehash}{c8ea6c12705dd8e43d4308eabfaeef62}
       \strng{authorfullhash}{9cd7d127a74c5e30f16006c015b1aab3}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -10685,8 +10743,8 @@
       \strng{authorbibnamehash}{1b1351b9eae33cf252bec51dbd5166f7}
       \strng{authornamehash}{1b1351b9eae33cf252bec51dbd5166f7}
       \strng{authorfullhash}{0db3f28b3d1c5cb7db2967855f995de2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -16804,8 +16862,8 @@
       \strng{authorbibnamehash}{d9799319ee6631a4a5c0d1ce9c963e79}
       \strng{authornamehash}{d9799319ee6631a4a5c0d1ce9c963e79}
       \strng{authorfullhash}{caab9467e6522ac78cf71ed36fa69504}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -16855,8 +16913,8 @@
       \strng{authorbibnamehash}{d29cfd823e643e4d83ae02328d63d67c}
       \strng{authornamehash}{d29cfd823e643e4d83ae02328d63d67c}
       \strng{authorfullhash}{d29cfd823e643e4d83ae02328d63d67c}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -16909,8 +16967,8 @@
       \strng{authorbibnamehash}{ab3f273aee517e8eedc702da5e155f64}
       \strng{authornamehash}{ab3f273aee517e8eedc702da5e155f64}
       \strng{authorfullhash}{ab3f273aee517e8eedc702da5e155f64}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -17481,8 +17539,8 @@
       \strng{authorbibnamehash}{54743cd1f37377b20c96b832ba3b235f}
       \strng{authornamehash}{54743cd1f37377b20c96b832ba3b235f}
       \strng{authorfullhash}{54743cd1f37377b20c96b832ba3b235f}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -19250,8 +19308,8 @@
       \strng{authorbibnamehash}{cead1e8affef7f98825bbdcab83a0e48}
       \strng{authornamehash}{cead1e8affef7f98825bbdcab83a0e48}
       \strng{authorfullhash}{579e54f568ed546a1edcd7dcb60a261e}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -19420,8 +19478,8 @@
       \strng{authorbibnamehash}{0aac24c354c8b627b6045737d580591a}
       \strng{authornamehash}{0aac24c354c8b627b6045737d580591a}
       \strng{authorfullhash}{e4cbe03fa67d01973453504549d7eef6}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}

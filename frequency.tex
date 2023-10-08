@@ -7,7 +7,7 @@ so I implemented it as a new input parameter for {\tt Multi\_CLASS}.
 In the standard version without frequency dependence, we can already see the influence of the different window functions and redshift ranges.
 \textit{change style}
 
-Using {\tt Multi\_CLASS} \cite{bellomo_beware_2020} I plotted the gravitational wave spectrum for different z, 
+Using {\tt Multi\_CLASS} \cite{bellomo_beware_2020} I plotted the GW angular power spectrum for different z, 
 different window functions (Dirac, top hat and Gaussian) and different redshift bin 
 widths \ref{plot_Cl_redshift}. One of the advantages of {\tt Multi\_CLASS} is, that the 
 code does not use the Limber approximation, which approximates the Bessel functions 
@@ -16,14 +16,14 @@ as a delta distribution.
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\linewidth]{Images/GW_autocorr_window-fct.jpg}
- \caption{Gravitational wave angular power spectrum for different window functions}
+ \caption{GW angular power spectrum for different window functions}
  \label{plot_Cl_window_fct}
 \end{figure} 
 
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\linewidth]{Images/GW_autocorr_z.jpg}
- \caption{Gravitational wave angular power spectrum for different redshifts}
+ \caption{GW angular power spectrum for different redshifts}
  \label{plot_Cl_redshift}
 \end{figure} 
 
@@ -105,14 +105,15 @@ spectrum in the following way.
     \mid h(f_0)\mid ^2
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{Images/dE_df_of_f.png}
+    \includegraphics[width=1\linewidth]{Images/dE_df_of_f.png}
     \caption{The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot\ $. }
     \label{dE_df_f}
 \end{figure} 
+
 %\vspace{-5cm}
-\begin{figure}[h]
+\begin{figure}
     \centering
     \subfloat[The energy spectrum at an observed frequency \newline of 1 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_1Hz.png}}
