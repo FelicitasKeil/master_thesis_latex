@@ -114,20 +114,20 @@ spectrum in the following way.
 %\vspace{-5cm}
 \begin{figure}
     \centering
-    \subfloat[The energy spectrum at an observed frequency \newline of 1 Hz]{
+    \subfloat[1 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_1Hz.png}}
     %\hspace{1.00\baselineskip}
-    \subfloat[The energy spectrum at an observed frequency \newline of 10 Hz]{
+    \subfloat[10 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_10Hz.png}}
     \\
     %\vspace{-1.00\baselineskip}
-    \subfloat[The energy spectrum at an observed frequency \newline of 100 Hz]{
+    \subfloat[100 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_100Hz.png}}
     %\hspace{-2.00\baselineskip}
-    \subfloat[The energy spectrum at an observed frequency \newline of 1000 Hz]{
+    \subfloat[1000 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_1000Hz.png}}
   
-    \caption{The energy spectrum $\frac{d^2E}{df_e d\Omega_e}$ at different observed freqeuncies as a function of redshift.}
+    \caption{The energy spectrum $d^2 E_{GW,e}/df_e d\Omega_e$ at different observed freqeuncies as a function of redshift.}
     \label{dE_df_diff_frequencies}
 \end{figure}
 
@@ -215,7 +215,7 @@ The merger rate of BBH depends on the number of haloes since their formation tak
     R_{BBH}(z) \propto \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
 \end{equation}
 
-We first consider the variance of the matter density field $\sigma^2$ which we get from the linear matter power spectrum integrated over the wavenumber $k$ with a tophat window function of the radius $R$.
+We first consider the variance of the matter density field $\sigma^2$ which we get from the linear matter power spectrum integrated over the wavenumber $k$ with a window function. This is the Fourier transform of a tophat function in real space with the width $R$, corresponding to the radius of the spherical halo.
 
 \begin{equation}
     \sigma^2(R, z) = \int_0^\infty k^2 P_{lin}(k, z) W^2(k, R) dk
@@ -243,16 +243,54 @@ The factor $f_{NL}$ accounts for non-linear effects in the halo collapse. There 
     f_{PS}(\sigma)=\sqrt{\frac{2}{\pi}} \frac{\delta_c}{\sigma}\exp(-\frac{\delta_c^2}{2\sigma^2})
 \end{equation}
 
-\begin{figure}[h]
+Here, we use the parametrisation by \cite{tinker_toward_2008}. They use a fitting formula depending on the overdensity $\Delta$. The overdensity characterises how much denser the halo is compared to the average universe density at the corresponding redshift.
+
+\begin{equation}
+    \Delta = \frac{3M_{\Delta}}{4\pi R^3_{\Delta}\bar{\rho_m}}
+\end{equation}
+
+The non-linear corrections then have the following form.
+
+\begin{equation}
+    f(\sigma)=A \left( \left(\frac{\sigma}{b}\right)^{-a}+1\right)\exp(-\frac{c}{\sigma^2})
+\end{equation}
+
+The used fitting parameters, dependent on the overdensity, are the following.
+
+\[ A = \begin{cases}
+    0.1(\log_{10}\Delta)-0.05 & \Delta<1600 \\
+    0.26 & \Delta \geq 1600
+\end{cases}
+\]
+
+\begin{equation}
+    a=1.43+(\log_{10}\Delta -2.3)^{1.5}
+\end{equation}
+\begin{equation}
+    b=1.0+(\log_{10}\Delta -1.6)^{-1.5}
+\end{equation}
+\begin{equation}
+    c=1.2+(\log_{10}\Delta -2.35)^{1.6}
+\end{equation}
+
+To show how the redshift and the overdensity influence the HMF, we vary the parameter in Fig. \ref{HMF_delta}.
+
+\begin{figure}
     \centering
-    \subfloat[The halo mass function in units of $\frac{h/M_\odot}{(Mpc/h)^3}$ or respectively $\frac{h^4}{M\odot Mpc^3}$
-        \label{HMF_plot}]{
+    \includegraphics[width=0.9\linewidth, clip]{Images/HMF_diff_z.png}
+    \caption{The dimensionless HMF for different redshifts $z$ at $\Delta=800$.}
+    \label{HMF_z}
+\end{figure} 
+
+\begin{figure}
+    \centering
+    \subfloat[{The dimensionless HMF for different overdensity parameters $\Delta$ at $z=0$.}
+        \label{HMF_delta}]{
+        \includegraphics[width=7.5cm, clip]{Images/HMF_diff_delta.png}}
+    \subfloat[The halo mass function in units of $\frac{h/M_\odot}{(Mpc/h)^3}$ or respectively $\frac{h^4}{M\odot Mpc^3}$ with $\Delta=800$, here at $z=0$.
+        \label{HMF_dim}]{
         \includegraphics[width=7.5cm, clip]{Images/HMF.png}}
-    \subfloat[{The dimensionless halo mass function }
-        \label{HMF_dimless_plot}]{
-        \includegraphics[width=7.5cm, clip]{Images/HMF_dimless.png}}
-    \caption{Plots of the used HMFs.}
-    \label{HMF_plots}
+    \caption{}
 \end{figure} 
 
 \section{Merger Rate}
@@ -265,10 +303,6 @@ The factor $f_{NL}$ accounts for non-linear effects in the halo collapse. There 
 \end{equation}
 
 Here, we have the time delay distribution $p(t_d)$, where the time delay is between the formation and the merger of the binary. (physical explanation)
-
-For the merger rate of binary black holes, we need the star formation rate. 
-
-...
 
 \begin{figure}[h]
     \centering

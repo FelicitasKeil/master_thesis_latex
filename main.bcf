@@ -2215,12 +2215,21 @@
     <bcf:citekey order="30">abazajian_seventh_2009</bcf:citekey>
     <bcf:citekey order="31">mccracken_ultravista_2012</bcf:citekey>
     <bcf:citekey order="32">dallarmi_dipole_2022</bcf:citekey>
-    <bcf:citekey order="33">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="33">tinker_toward_2008</bcf:citekey>
     <bcf:citekey order="34">dallarmi_dipole_2022</bcf:citekey>
     <bcf:citekey order="35">dallarmi_dipole_2022</bcf:citekey>
     <bcf:citekey order="36">dallarmi_dipole_2022</bcf:citekey>
-    <bcf:citekey order="37">bertacca_projection_2020</bcf:citekey>
-    <bcf:citekey order="38">ajith_inspiral-merger-ringdown_2011</bcf:citekey>
+    <bcf:citekey order="37">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="38">bertacca_projection_2020</bcf:citekey>
+    <bcf:citekey order="39">ajith_inspiral-merger-ringdown_2011</bcf:citekey>
+    <bcf:citekey order="40">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="41">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="42">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="43">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="44">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="45">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="46">todo</bcf:citekey>
+    <bcf:citekey order="46">healpix</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -4,56 +4,84 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.\relax }}{4}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.\relax }}{8}{figure.caption.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite {capurri_intensity_2021}.\relax }}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite {capurri_intensity_2021}.\relax }}{12}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite {abbott_observation_2016}.\relax }}{8}{figure.caption.6}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces GW angular power spectrum for different window functions\relax }}{12}{figure.caption.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces GW angular power spectrum for different redshifts\relax }}{13}{figure.caption.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot \ $. \relax }}{15}{figure.caption.11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The energy spectrum $\frac {d^2E}{df_e d\Omega _e}$ at different observed freqeuncies as a function of redshift.\relax }}{16}{figure.caption.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 1 Hz}}}{16}{subfigure.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 10 Hz}}}{16}{subfigure.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 100 Hz}}}{16}{subfigure.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 1000 Hz}}}{16}{subfigure.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{18}{figure.caption.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Plots of the used HMFs.\relax }}{19}{figure.caption.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The halo mass function in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ }}}{19}{subfigure.6.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{The dimensionless halo mass function } }}}{19}{subfigure.6.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces BBH merger rate as a function of the redshift z\relax }}{20}{figure.caption.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The final window function at 1 Hertz for this code in blue for comparison with \cite {dallarmi_dipole_2022} in orange.\relax }}{21}{figure.caption.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The window functions at different observed frequencies.\relax }}{22}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite {abbott_observation_2016}.\relax }}{13}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Design sensitivity curves for the LVK detector network. For LIGO, this is the advanced LIGO A+ design sensitivity and for Virgo the O5 sensitivity.\relax }}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces GW angular power spectrum for different window functions\relax }}{18}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces GW angular power spectrum for different redshifts\relax }}{18}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.\relax }}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot \ $. \relax }}{20}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The energy spectrum $d^2 E_{GW,e}/df_e d\Omega _e$ at different observed freqeuncies as a function of redshift.\relax }}{21}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 Hz}}}{21}{subfigure.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {10 Hz}}}{21}{subfigure.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {100 Hz}}}{21}{subfigure.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {1000 Hz}}}{21}{subfigure.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{23}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The dimensionless HMF for different redshifts $z$ at $\Delta =800$.\relax }}{25}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \relax }}{26}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{The dimensionless HMF for different overdensity parameters $\Delta $ at $z=0$.} }}}{26}{subfigure.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The halo mass function in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ with $\Delta =800$, here at $z=0$. }}}{26}{subfigure.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces BBH merger rate as a function of the redshift z\relax }}{27}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The final window function at 1 Hertz for this code in blue for comparison with \cite {dallarmi_dipole_2022} in orange.\relax }}{28}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The window functions at different observed frequencies.\relax }}{29}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Design sensitivity curves for the LVK detector network. For LIGO, this is the advanced LIGO A+ design sensitivity and for Virgo the O5 sensitivity.\relax }}{31}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{32}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.\relax }}{33}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{33}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AGWB angular power spectrum of different observed frequencies, going up to $l=30$.\relax }}{38}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The dipole of the AGWB at different observed frequencies.\relax }}{38}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the computed dipole contribution to \cite {dallarmi_dipole_2022}. On the left are the computed anisotropies using our formalism for the intrinsic anisotropies. On the right, the computed dipole by \cite {dallarmi_dipole_2022}. The intrinsic dipole is shown in blue, the kinematic dipole in orange and the shot noise for the dipole in green.\relax }}{39}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{This work} }}}{39}{subfigure.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{\cite {dallarmi_dipole_2022}} }}}{39}{subfigure.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces An example of using the {\tt NIFTy} code to reconstruct the power spectrum computed in this work, but in one dimension.\relax }}{39}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The power spectra of the one-dimensional toy model. The input power spectrum is shown in grey, the signal realisation in red and the reconstruction using IFT in black.\relax }}{40}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of the AGWB at 100 Hertz on a sky map using the {\tt NIFTy} code. The data on top is generated from the signal which is a realisation of the input power spectrum. The posterior mean is calculated using a Wiener filter. A sample of this is drawn randomly. The residuals represent the difference between signal and reconstruction from the first row. The uncertainty map shows the calculated errors on the reconstruction.\relax }}{41}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The power spectra of the AGWB separation at 100 Hertz. The input power spectrum is shown in grey, the signal realisation in red and the reconstruction using IFT in black.\relax }}{42}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Reconstruction of the AGWB at 400 Hertz on a sky map using the {\tt NIFTy} code. The data on top is generated from the signal which is a realisation of the input power spectrum. The posterior mean is calculated using a Wiener filter. A sample of this is drawn randomly. The residuals represent the difference between signal and reconstruction from the first row. The uncertainty map shows the calculated errors on the reconstruction.\relax }}{43}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces The power spectra of the AGWB separation at 400 Hertz. The input power spectrum is shown in grey, the signal realisation in red and the reconstruction using IFT in black.\relax }}{44}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Reconstruction of the CGWB at 900 Hertz on a sky map using the {\tt NIFTy} code. The data on top is generated from the signal which is a realisation of the input power spectrum. The posterior mean is calculated using a Wiener filter. A sample of this is drawn randomly. The residuals represent the difference between signal and reconstruction from the first row. The uncertainty map shows the calculated errors on the reconstruction.\relax }}{45}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The power spectra of the CGWB separation at 900 Hertz. The input power spectrum is shown in grey, the signal realisation in red and the reconstruction using IFT in black.\relax }}{46}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
