@@ -1,4 +1,5 @@
 \section{Fundamentals}
+\label{gw_fundamentals}
 GW are oscillations in spacetime, similar to electromagnetic
 waves. We can start with the Einstein equation:
 
@@ -229,43 +230,11 @@ The wave field for non-relativistic sources is thus:
     \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{8\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\frac{\partial^2}{\partial t^2}\left(Q_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{Q} \; \vec{r}\right)
 \end{equation}
 
-\section{Sources}
-GW can be created by different sources. These can be
-merging binaries, bursts (e.g. from core-collapse supernovae), continuous waves 
-(e.g. from pulsars) and a stochastic background (see below).
-
-\subsection{Binary Black Hole Mergers}
-In this work, we focus on binary black holes. Since most resolved events from LIGO/Virgo are binary black holes. In a recent analysis of the Gravitational Wave Transient Catalogue 3 (GWTC-3) by \cite{the_ligo_scientific_collaboration_population_2022}, they considered events with a false alarm rate of less than $\frac{1}{4}$ per year. Out of this sample of 67 events, 63 came from binary black holes, 2 from binary neutron stars and 2 from neutron star-black hole mergers.
-
-If we consider the energy density parameter of the stochastic GW background, we see that binary black holes dominate at lower frequencies up to around 600 Hz, see Fig. \ref{BG_sources}.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Images/Capurri_GW_Background_monopole_sources.png}
-    \caption{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. The Figure is taken from Ref. \cite{capurri_intensity_2021}.}
-    \label{BG_sources}
-\end{figure} 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Images/waveform_abbott_complete.png}
-    \caption{The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite{abbott_observation_2016}.}
-    \label{GW_waveform}
-\end{figure} 
-
-From the waveform, we can extrapolate black hole properties, like the chirp mass and the spin. 
-
-\begin{equation}
-    \mathcal{M}_c = \frac{(m_1m_2)^{3/5}}{(m_1+m_2)^{1/5}}
-\end{equation}
-
-The frequency is determined by the total mass. 
-The waveform can be decomposed into harmonic, where the quadrupole ($(\ell, m)=(2,2)$) is naturally the dominant one. 
-(insert from Bonn lectures?)
-
 \section{Stochastic Background}
-For the stochastic background, we need the correlation between two detector
-outputs \cite{christensen_stochastic_2019}.
+The stochastic GW background consists of all sources that are too faint to be resolved individually, thus it is a superposition of many independent sources. The same source can contribute to multiple frequencies over time. 
+The biggest background comes from astrophysical sources, like compact object mergers, but there is also a smaller cosmological background present. That one originates from early universe phenomena. 
+To measure the background we need the correlation between two detector
+outputs \cite{christensen_stochastic_2019}. If the noise between them is uncorrelated, it will average out over time and leave the background signal.
 \begin{equation}
     \langle s_1 (t) s_2(t)\rangle \, = \, \langle(n_1(t) + h(t))(n_2(t) + h(t))\rangle
 \end{equation}
@@ -287,8 +256,26 @@ density.
 \begin{equation}
     \rho_{GW} = \int_0^\infty df \, S_h(f) \frac{\pi c^2 f^2}{8G}
 \end{equation} 
-\subsection{Astrophysical}
 
+The frequency-dependent monopole depends on this energy density. Here, we consider the observed frequency $f_o$.
+\begin{equation}
+    \bar{\Omega}_{AGWB}(f_o)=\frac{d\rho_{GW}}{df}
+\end{equation}
+
+The energy density parameter is the frequency-dependent monopole integrated over the logarithmic frequency.
+
+\begin{equation}
+    \Omega_{GW} = \int d\ln f \; \Omega_{GW}(f_o) 
+\end{equation}
+\begin{equation}
+    \approx \int d\ln f \; \bar{\Omega}_{AGWB}(f_o)
+\end{equation}
+
+\subsection{Astrophysical}
+GW can be created by different sources. Considering astrophysical sources, they can come from
+merging binaries, bursts (e.g. from core-collapse supernovae) or continuous waves 
+(e.g. from pulsars). 
+The AGWB consists mostly of compact object mergers, which are mainly black holes and neutron stars. 
 
 Anisotropy limits from LIGO:
 (check for more current)
@@ -303,8 +290,47 @@ a more interesting cosmology, which is why it would be important to disentangle
 any anisotropic that could be observed.
 
 The AGWB was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as accurate clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a GW background. 
-The NANOGrav experiment used a frequency range of $10^{7.5} - 10^{8.75}$ Hz. They assumed a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes. \cite{phinney_practical_2001}
+The NANOGrav experiment used a frequency range of $10^{-8.75} - 10^{-7.5}$ Hz. They assumed a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes. \cite{phinney_practical_2001}
 Using this, they find an integrated energy density $\Omega_{GW} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}$.
+
+
+\subsubsection{Binary Black Hole Mergers}
+
+A compact binary coalescence will produce a chirp-like GW signal, like in \ref{GW_waveform}. Both massive objects attract each other and decrease their orbit around each other in the inspiral phase. The potential energy is converted into a GW. After the inspiral phase, the merger and ringdown phases follow, where the new BH becomes axisymmetric and stops emitting GW. The frequency increases over time during all three phases.
+
+The inspiral phase is the simplest to describe analytically, see \ref{gw_fundamentals}. However, in this work, we consider all three phases of the GW. We will see later that this is necessary to derive a frequency dependence.
+
+
+In this work, we focus on binary black holes. Since most resolved events from LIGO/Virgo are binary black holes. In a recent analysis of the Gravitational Wave Transient Catalogue 3 (GWTC-3) by \cite{the_ligo_scientific_collaboration_population_2022}, they considered events with a false alarm rate of less than $\frac{1}{4}$ per year. Out of this sample of 67 events, 63 came from binary black holes, 2 from binary neutron stars and 2 from neutron star-black hole mergers.
+
+If we consider the energy density parameter of the stochastic GW background, we see that binary black holes are present at frequencies up to around 1000 Hz, see Fig. \ref{BG_sources}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Images/Capurri_GW_Background_monopole_sources.png}
+    \caption{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite{capurri_intensity_2021}.} 
+    \label{BG_sources}
+\end{figure} 
+
+In this figure, all three curves are normalised to the local merger rate from the advanced LIGO/Virgo detectors. Without this normalisation binary BH mergers dominate at most frequencies at which they are present. We can see that for the frequency range of $1-1000 Hz$, it is reasonable to only consider BBH in our analysis since they are the most present source. However, the applied formalism for the frequency dependence can be generalised to a system of a BH and a neutron star or a system of two neutron stars.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Images/waveform_abbott_complete.png}
+    \caption{The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite{abbott_observation_2016}.}
+    \label{GW_waveform}
+\end{figure} 
+
+From the waveform, we can extrapolate black hole properties, like the chirp mass and the spin. 
+
+\begin{equation}
+    \mathcal{M}_c = \frac{(m_1m_2)^{3/5}}{(m_1+m_2)^{1/5}}
+\end{equation}
+
+The frequency is determined by the total mass. 
+The waveform can be decomposed into harmonic, where the quadrupole ($(\ell, m)=(2,2)$) is naturally the dominant one. 
+(insert from Bonn lectures?)
+
 
 \subsubsection{Dipole}
 The cosmological principle says, that the universe is isotropic and homogeneous on large scales. GW are one mode of testing this further. If we find anisotropies in the GW background, other than the kinematic dipole and shot noise, this would be evidence against the principle.
@@ -319,14 +345,14 @@ The GW density contrast can be written with an integration over the window funct
     = \int dz \; W(f_0, z) \; \Delta(f_0, \hat{n}, z)
 \end{equation}
 
-...
 \subsection{Cosmological}
 The major contributions to the cosmological GW background are primordial
 black holes and GW from phase transitions and inflation.
-Schulze et al. \cite{schulze_gw_class_2023} computed the angular power spectrum 
-of this background using a modified version of CLASS\cite{blas_cosmic_2011}.
-\subsubsection{Primordial Black Holes}
-...
+Schulze et al. \cite{schulze_gw_class_2023} computed the angular power spectrum of this background using a modified version of CLASS \cite{blas_cosmic_2011} called {\tt GW\_CLASS}.
+Bubbles of a phase can form in a universe which is in an older phase. In there, magnetohydrodynamic (MHD) turbulence can also produce GW.
+TODO: PBH shortly
+Using this code, one can choose a source of this background and compute the associated angular power spectrum. Here, we use the signal from the expected inflationary GW background with a blue tilt. So, we will have a stronger background at higher frequencies compared to lower frequencies. 
+
 \subsubsection{Inflation}
 
 A period of inflation in the early universe solves two important cosmological problems, namely the flatness and the horizon problem. The flatness problem arises when we assume radiation domination followed by matter domination which is followed by $\Lambda$ (the cosmological constant) domination. The spatial curvature density parameter is measured to be very low. 
@@ -350,7 +376,7 @@ We also know how $\Omega_k$ scales with the scale factor.
     \Omega_k = - \frac{k}{(aH)^2}= -\frac{k}{\dot{a}^2}
 \end{equation}
 
-In the case of an inflationary GW background, the tensor power spectrum $P_T(k)$ creates the GW. This is linearly related to the average GW energy density parameter (or monopole) \cite{schulze_gw_class_2023}.
+In the case of an inflationary GW background, the tensor power spectrum $<s(k)$ creates the GW. This is linearly related to the average GW energy density parameter (or monopole) \cite{schulze_gw_class_2023}.
 
 \begin{equation}
     \bar{\Omega}_{GW} = \frac{1}{12 H_0^2 a_0^2} \frac{\eta_{eq}^2}{2\eta_0^4} P_T(k)
@@ -358,11 +384,6 @@ In the case of an inflationary GW background, the tensor power spectrum $P_T(k)$
 
 The GW created through large-scale perturbations during inflation are relevant for wavenumbers $k=10^{-5} Mpc^{-1} -1 Mpc^{-1}$, which corresponds to millihertz up to the Hertz range, going through both the sensitivity range of ground-based detectors, like ET \cite{alonso_noise_2020}, and space-based detectors like LISA \cite{robson_construction_2019}.
 
-\subsubsection{Phase Transitions}
-
-Bubbles of a phase can form in a universe which is in an older phase. In there, magnetohydrodynamic (MHD) turbulence can also produce GW.
-
-...
 
 \subsection{Number Density Distribution}
 

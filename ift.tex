@@ -27,10 +27,10 @@ this formalism.
 If we assume a linear measurement, our data consists of the signal modified by a response function and added noise.
 
 \begin{equation}
-    \underbar{d} = R\underbar{s} +\underbar{n}
+    d = R s + n
 \end{equation}
 \begin{equation}
-    (R\underbar{s})_i = \int dx R_{ix} s_{x}
+    (R s)_i = \int dx R_{ix} s_{x}
 \end{equation}
 The response corresponds to the point spread function of our instrument and
 other linear operations performed on the data.
@@ -59,8 +59,7 @@ Here, $Z_d$ is the partition function, which is the evidence here.
         \mathcal{H}(d, s) = -ln(P(d|s)) - ln(P(s))
 \end{equation}
 
-\section{Linear Filter}
-\subsection{Wiener Filter}
+\section{Wiener Filter}
 For a Gaussian prior and a Gaussian signal, we obtain the following
 Hamiltonian.
 \begin{equation}

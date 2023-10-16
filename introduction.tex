@@ -1,8 +1,14 @@
 \documentclass[main.tex]{subfiles}
 
-\textit{finish at the end}
+Most large-scale structure surveys, like Planck (todo cite planck), have found an unexpectedly large dipole anisotropy, which can be used to test the cosmological principle. The principle states that the universe is isotropic and homogeneous on large scales. These surveys have error sources, such as partial sky covering due to masking sources and the fact that clustering of matter can produce a dipole contribution. 
 
-Many GW have an amplitude below the necessary signal-to-noise ratio to be detected individually. These sources form the GW background. The first detection of this background was made in 2023 by the NANOGrav pulsar time array with an energy density parameter of $\Omega_{GW} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}$ \cite{agazie_nanograv_2023}. There is a predicted AGWB and a predicted cosmological GW background.
-In current GW experiments, like LIGO, Virgo and KAGRA, the noise is too high to detect this background. Experiments with a higher sensitivity are planned for the future, like the ground-based Einstein Telescope (ET) and Cosmic Explorer (CE) or the space-based Laser Interferometer Space Antenna (LISA) and TianQin. These might have low enough noise to detect the GW background and even disentangle different components.
+Gravitational waves have a very high sky coverage since masking is not necessary for GW detectors. Thus, we can use GW observations to test the cosmological principle in an independent way. To do this, we can look at the astrophysical gravitational wave background (AGWB), specifically compact binary mergers. They are expected to make up the majority of the GW background. This background has been detected in a low-frequency range of $10^{-8.75} - 10^{-7.5}$ Hz.
 
-With new detectors in the future we could measure intrinsic anisotropies in this background which are not coming from our observer motion or statistical properties, so-called shot noise from a Poisson distribution. These anisotropies, like for example the dipole, would contradict the cosmological principle. It stated that the universe is homogeneous and isotropic at every point.
+Many GW have an amplitude below the necessary signal-to-noise ratio to be detected individually. These sources form the GW background. The first detection of this background was made in 2023 by the NANOGrav pulsar time array with an energy density parameter of $\Omega_{GW} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}$ \cite{agazie_nanograv_2023}. 
+In current GW experiments, like LIGO, Virgo and KAGRA, the noise is too high to detect this background. Experiments with a higher sensitivity are planned for the future, like the ground-based Einstein Telescope (ET) and Cosmic Explorer (CE). These might have low enough noise to detect the GW background and even disentangle different components.
+
+With new detectors in the future we could measure intrinsic anisotropies in this background which are not coming from our observer motion or statistical properties, so-called shot noise from a Poisson distribution. These anisotropies, like for example the dipole, would contradict the cosmological principle. It states that the universe is homogeneous and isotropic at every point.
+
+We compute the anisotropies of the (AGWB) in a frequency-dependent way using a modified version of {\tt CLASS}, an Einstein-Boltzmann solver. Then, we use a separation method from information field theory (IFT) on the AGWB at different frequencies, as well as on the cosmological GW background.
+
+We find that the signal can be partly recovered for the AGWB at frequencies with a high angular power spectrum. However, for most frequencies of the AGWB, as well as for the cosmological background, the separation does not work.

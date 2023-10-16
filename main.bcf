@@ -2186,14 +2186,14 @@
     <bcf:citekey order="1">agazie_nanograv_2023</bcf:citekey>
     <bcf:citekey order="2">van_holten_gravitational_2019</bcf:citekey>
     <bcf:citekey order="3">van_holten_gravitational_2019</bcf:citekey>
-    <bcf:citekey order="4">the_ligo_scientific_collaboration_population_2022</bcf:citekey>
-    <bcf:citekey order="5">capurri_intensity_2021</bcf:citekey>
-    <bcf:citekey order="6">capurri_intensity_2021</bcf:citekey>
-    <bcf:citekey order="7">abbott_observation_2016</bcf:citekey>
-    <bcf:citekey order="8">abbott_observation_2016</bcf:citekey>
-    <bcf:citekey order="9">christensen_stochastic_2019</bcf:citekey>
-    <bcf:citekey order="10">agazie_nanograv_2023</bcf:citekey>
-    <bcf:citekey order="11">phinney_practical_2001</bcf:citekey>
+    <bcf:citekey order="4">christensen_stochastic_2019</bcf:citekey>
+    <bcf:citekey order="5">agazie_nanograv_2023</bcf:citekey>
+    <bcf:citekey order="6">phinney_practical_2001</bcf:citekey>
+    <bcf:citekey order="7">the_ligo_scientific_collaboration_population_2022</bcf:citekey>
+    <bcf:citekey order="8">capurri_intensity_2021</bcf:citekey>
+    <bcf:citekey order="9">capurri_intensity_2021</bcf:citekey>
+    <bcf:citekey order="10">abbott_observation_2016</bcf:citekey>
+    <bcf:citekey order="11">abbott_observation_2016</bcf:citekey>
     <bcf:citekey order="12">schulze_gw_class_2023</bcf:citekey>
     <bcf:citekey order="13">blas_cosmic_2011</bcf:citekey>
     <bcf:citekey order="14">schulze_gw_class_2023</bcf:citekey>
@@ -2218,9 +2218,9 @@
     <bcf:citekey order="33">dallarmi_dipole_2022</bcf:citekey>
     <bcf:citekey order="34">dallarmi_dipole_2022</bcf:citekey>
     <bcf:citekey order="35">dallarmi_dipole_2022</bcf:citekey>
-    <bcf:citekey order="36">ajith_inspiral-merger-ringdown_2011</bcf:citekey>
-    <bcf:citekey order="37">dallarmi_dipole_2022</bcf:citekey>
-    <bcf:citekey order="38">bertacca_projection_2020</bcf:citekey>
+    <bcf:citekey order="36">dallarmi_dipole_2022</bcf:citekey>
+    <bcf:citekey order="37">bertacca_projection_2020</bcf:citekey>
+    <bcf:citekey order="38">ajith_inspiral-merger-ringdown_2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

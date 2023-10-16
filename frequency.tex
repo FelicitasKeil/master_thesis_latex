@@ -94,15 +94,14 @@ The transition frequency from merger to ringdown is given by the least-damped mo
 Later, we will consider the square strain as a function of frequency $|h(f)|^2$ for the energy spectrum, so we can ignore the phase $\psi(f)$.
 
 \begin{equation}
-    h(f)=A(f)e^{-\psi(f)}
+    h(f)=A(f)e^{-i\psi(f)}
 \end{equation}
 
 Here the redshift dependence will come in through the derivation by the emission 
 frequency, see e.g. \ref{window}. From this waveform template, we can get the energy 
 spectrum in the following way.
 \begin{equation}
-    \frac{dE_{GW,e}}{df_e d\Omega_e} = \frac{\pi d_L^2 c^3f_0^2}{2G(1+z)^2}
-    \mid h(f_0)\mid ^2
+    \frac{dE_{GW,e}}{df_e d\Omega_e} = \frac{\pi d_L^2 c^3f_o^2}{2G(1+z)^2} | h(f_o)| ^2 \propto f_o^2h^2(f_o) \propto h^2(t)
 \end{equation}
 
 \begin{figure}
@@ -138,28 +137,6 @@ If we plot the energy spectrum as a function of z for different frequencies, see
 \begin{equation}
     f_e = (1+z)f_0
 \end{equation}
-
-\section{Merger Rate}
-\begin{equation}
-    R_{BBH}(z=0) = 19 \:\rm{Gpc}^{-3}\rm{yr}{-1}
-\end{equation}
-\begin{equation}
-    R_{BBH}(z)=\mathcal{A}_{LIGO}^{BBH}\int dt_d p(t_d) \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
-    \label{BBH_merger_equation}
-\end{equation}
-
-Here, we have the time delay distribution $p(t_d)$, where the time delay is between the formation and the merger of the binary. (physical explanation)
-
-For the merger rate of binary black holes, we need the star formation rate. 
-
-...
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{Images/bbh_merger_rate.png}
-    \caption{BBH merger rate as a function of the redshift z}
-    \label{bbh_merger_rate}
-   \end{figure} 
 
 \section{Star Formation Rate}
 \subsection{\textsc{UniverseMachine}}
@@ -233,12 +210,38 @@ The median $v_{Mpeak}$ is taken from the \textit{Bolshoi-Planck} DM simulation a
 
 \section{Halo Mass Function}
 
-\textit{change style}
+The merger rate of BBH depends on the number of haloes since their formation takes place in haloes. This is why it depends on the halo mass function $\frac{dn}{dM_h}(z_f, M_h)$ integrated over the halo mass. 
+\begin{equation}
+    R_{BBH}(z) \propto \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
+\end{equation}
 
-Since we also need the halo mass function (HMF) to calculate the BBH merger rate, 
-see \ref{BBH_merger_equation}. The HMF $dn/dM_h (z_f, M_h)$ was implemented by Daniel Meinert in the "21cm" branch in {\tt CLASS}. It uses the Press-Schechter formalism.
+We first consider the variance of the matter density field $\sigma^2$ which we get from the linear matter power spectrum integrated over the wavenumber $k$ with a tophat window function of the radius $R$.
 
-\subsection{Press-Schechter Formalism}
+\begin{equation}
+    \sigma^2(R, z) = \int_0^\infty k^2 P_{lin}(k, z) W^2(k, R) dk
+\end{equation}
+
+For a spherical halo model, we get the radius through the mass and the density.
+
+\begin{equation}
+    R= \sqrt[3]{\frac{3M}{4\pi \rho_m}}
+\end{equation}
+
+Then, the halo mass function comes from the logarithmic derivative of $\sigma^{-1}$ by the halo mass.
+
+\begin{equation}
+    \frac{dn(M)}{dM }=\frac{\rho_m}{M^2}\frac{d\ln (\frac{1}{\sigma})}{d\ln M}f_{NL}(\sigma)
+\end{equation}
+
+The factor $f_{NL}$ accounts for non-linear effects in the halo collapse. There are different ways to model these effects. A common analytical one is the Press-Schechter formalism parametrised by the critical overdensity $\delta_c$.
+
+\begin{equation}
+    \delta = \frac{\delta \rho}{\bar{\rho}}
+\end{equation}
+
+\begin{equation}
+    f_{PS}(\sigma)=\sqrt{\frac{2}{\pi}} \frac{\delta_c}{\sigma}\exp(-\frac{\delta_c^2}{2\sigma^2})
+\end{equation}
 
 \begin{figure}[h]
     \centering
@@ -251,6 +254,28 @@ see \ref{BBH_merger_equation}. The HMF $dn/dM_h (z_f, M_h)$ was implemented by D
     \caption{Plots of the used HMFs.}
     \label{HMF_plots}
 \end{figure} 
+
+\section{Merger Rate}
+\begin{equation}
+    R_{BBH}(z=0) = 19 \:\rm{Gpc}^{-3}\rm{yr}{-1}
+\end{equation}
+\begin{equation}
+    R_{BBH}(z)=\mathcal{A}_{LIGO}^{BBH}\int dt_d p(t_d) \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
+    \label{BBH_merger_equation}
+\end{equation}
+
+Here, we have the time delay distribution $p(t_d)$, where the time delay is between the formation and the merger of the binary. (physical explanation)
+
+For the merger rate of binary black holes, we need the star formation rate. 
+
+...
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Images/bbh_merger_rate.png}
+    \caption{BBH merger rate as a function of the redshift z}
+    \label{bbh_merger_rate}
+   \end{figure} 
 
 
 \section{Window Function}
@@ -273,15 +298,15 @@ We can then Fourier and Legendre transform the GW density contrast:
     \delta_X(f_0, \vec{x})
 \end{equation}
 \begin{equation}
-    \Delta_l^X(k, f_0) = \int d\phi \int d\mu \mathcal{P}_l(\mu) 
-    \delta^X(\vec{k}, f_0)
+    \Delta_l(k, f_0) = \int d\phi \int d\mu \mathcal{P}_l(\mu) 
+    \delta(\vec{k}, f_0)
 \end{equation}
 
 From that, we can calculate the angular power spectrum using the primordial power 
 spectrum:
 
 \begin{equation}
-    C_l^{XY} = 4\pi \int \frac{dk}{k} P(k) \Delta_l^X \Delta_l^{Y*}
+    C_l = 4\pi \int \frac{dk}{k} P(k) \Delta_l \Delta_l^*
 \end{equation}
 
 Here, X and Y can be the intrinsic, shot noise or kinematic (dipole) contribution.
@@ -291,8 +316,17 @@ The window function depends upon others on the binary black hole merger rate.
 \begin{equation}
 \label{window}
     \tilde{W}(z, f_0)=\frac{f_0}{\rho_c c^2 \bar{\Omega}_{AGWB}(f_0)}
-    \frac{R_{BBH}(z)}{(1+z)H(z)}\int d\vec{\theta}p(\vec{\theta})
-    w(z, \vec{\theta}) \frac{dE_{GW}}{df_e d\Omega_e}(f_e, \vec{\theta})
+    \frac{R_{BBH}(z)}{(1+z)H(z)} \left. \frac{dE_{GW}}{df_e d\Omega_e}(f_e)\right|_{f_e=(1+z)f_0}
+\end{equation}
+
+The window function is normalised using the monopole, which is the same expression integrated over $z$.
+
+\begin{equation}
+    \bar{\Omega}_{AGWB}(f_0)= \frac{f_0}{\rho_c}\frac{d\rho_{GW}}{df}
+\end{equation}
+
+\begin{equation}
+    = \frac{f_0}{\rho_c c^2 } \int \frac{dz}{(1+z)H(z)} R_{BBH}(z) \frac{dE_{GW}}{df_e d\Omega_e}(f_e)
 \end{equation}
 
 \begin{figure}[h]
@@ -310,6 +344,12 @@ The window function depends upon others on the binary black hole merger rate.
 \end{figure} 
 
 
+\section{Bias \& Magnification Bias}
+\textit{change style}
+
+If one compares the contributions to $\Delta_l^{\rm{AGWB}}$ between {\tt CLASSgal} and the Dall'Armi paper \cite{dallarmi_dipole_2022}, the magnification bias has to be  $s=\frac{2}{5}$ for the expressions to match. To find out why this is the case, I tried some calculations with $\frac{dN}{dz}$, but could not match this value.  After reading the paper by Bertacca et al. \cite{bertacca_projection_2020} (recommended by Lorenzo), one can see that they derive their expressions from 
+first principles without introducing the magnification bias separately. 
+
 \section{Evolution Bias}
 \label{evo_bias_section}
 The evolution bias accounts for the creation of new sources. This is why it depends on the redshift derivative of the merger rate and the energy spectrum of one merger. We can write this in terms of the derivative of the GW energy flux of the scale factor $a$.
@@ -325,14 +365,3 @@ The energy flux of GW is a product of the energy spectrum of one binary, using t
 \end{equation}
 
 It makes sense to use an Einstein-Boltzmann solver, like CLASS (cite), since the formalism of computing the angular power spectrum is similar to doing this for galaxy counts.
-
-\section{Magnification Bias}
-\textit{change style}
-
-
-If one compares the contributions to $\Delta_l^{\rm{AGWB}}$ between {\tt CLASSgal} and the Dall'Armi paper \cite{dallarmi_dipole_2022}, the magnification bias has to be
- $s=\frac{2}{5}$ for the expressions to match. To find out why this is the case, 
- I tried some calculations with $\frac{dN}{dz}$, but could not match this value. 
- After reading the paper by Bertacca et al. \cite{bertacca_projection_2020} 
- (recommended by Lorenzo), one can see that they derive their expressions from 
- first principles without introducing the magnification bias separately. 

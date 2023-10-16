@@ -6,19 +6,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.\relax }}{4}{figure.caption.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. The Figure is taken from Ref. \cite {capurri_intensity_2021}.\relax }}{6}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite {capurri_intensity_2021}.\relax }}{7}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite {abbott_observation_2016}.\relax }}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite {abbott_observation_2016}.\relax }}{8}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces GW angular power spectrum for different window functions\relax }}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces GW angular power spectrum for different window functions\relax }}{12}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces GW angular power spectrum for different redshifts\relax }}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces GW angular power spectrum for different redshifts\relax }}{13}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot \ $. \relax }}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot \ $. \relax }}{15}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The energy spectrum $\frac {d^2E}{df_e d\Omega _e}$ at different observed freqeuncies as a function of redshift.\relax }}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The energy spectrum $\frac {d^2E}{df_e d\Omega _e}$ at different observed freqeuncies as a function of redshift.\relax }}{16}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 1 Hz}}}{16}{subfigure.4.1}%
 \defcounter {refsection}{0}\relax 
@@ -28,31 +28,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The energy spectrum at an observed frequency \newline of 1000 Hz}}}{16}{subfigure.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces BBH merger rate as a function of the redshift z\relax }}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{18}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Plots of the used HMFs.\relax }}{19}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Plots of the used HMFs.\relax }}{20}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The halo mass function in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ }}}{19}{subfigure.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {The halo mass function in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ }}}{20}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{The dimensionless halo mass function } }}}{19}{subfigure.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{The dimensionless halo mass function } }}}{20}{subfigure.7.2}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces BBH merger rate as a function of the redshift z\relax }}{20}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The final window function at 1 Hertz for this code in blue for comparison with \cite {dallarmi_dipole_2022} in orange.\relax }}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The final window function at 1 Hertz for this code in blue for comparison with \cite {dallarmi_dipole_2022} in orange.\relax }}{21}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The window functions at different observed frequencies.\relax }}{21}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The window functions at different observed frequencies.\relax }}{22}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Design sensitivity curves for the LVK detector network. For LIGO, this is the advanced LIGO A+ design sensitivity and for Virgo the O5 sensitivity.\relax }}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Design sensitivity curves for the LVK detector network. For LIGO, this is the advanced LIGO A+ design sensitivity and for Virgo the O5 sensitivity.\relax }}{24}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{25}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.\relax }}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.\relax }}{26}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{25}{figure.caption.20}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Expected sensitivity for LISA. The figure is taken from the LISA L3 mission proposal.\relax }}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref {v_mpeak-M_h-relation}.\relax }}{26}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
