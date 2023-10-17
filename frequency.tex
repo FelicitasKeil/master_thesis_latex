@@ -1,54 +1,32 @@
 The AGWB is not independent of the observed frequency of the GW. In the standard 
-{\tt Multi\_CLASS} code, it is possible to compute the angular power spectrum of the AGWB. However, this does not include any frequency dependency of this background which can generally not be neglected, see \cite{dallarmi_dipole_2022}. Therefore I added this frequency dependency which enters in two instances here. One is the frequency-dependent window function that weights contributions from different redshifts and the second is the evolution bias which accounts for new sources being added with time (i.e. lower z). Both will be discussed in detail in section \ref{window_fct_section} and \ref{evo_bias_section}.
+{\tt Multi\_CLASS} code, it is possible to compute the angular power spectrum of the AGWB. However, this does not include any frequency dependency of this background which can generally not be neglected, see \cite{dallarmi_dipole_2022}. Therefore I added this frequency dependency which enters in two instances here. One is the frequency-dependent window function that weights contributions from different redshifts and the second is the evolution bias which accounts for new sources being added with time (i.e. lower z). Both will be discussed in section \ref{window_fct_section} and \ref{evo_bias_section}.
 
-We need to specify the GW frequency as a parameter in the .ini that we give to CLASS,
-so I implemented it as a new input parameter for {\tt Multi\_CLASS}.
+We need to specify the GW frequency as a parameter in the initialisation file that we give to CLASS, so we implemented it as a new input parameter for {\tt Multi\_CLASS}.
 
-In the standard version without frequency dependence, we can already see the influence of the different window functions and redshift ranges.
-\textit{change style}
-
-Using {\tt Multi\_CLASS} \cite{bellomo_beware_2020} I plotted the GW angular power spectrum for different z, 
-different window functions (Dirac, top hat and Gaussian) and different redshift bin 
-widths \ref{plot_Cl_redshift}. One of the advantages of {\tt Multi\_CLASS} is, that the 
-code does not use the Limber approximation, which approximates the Bessel functions 
-as a delta distribution. 
-\\
-\begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{Images/GW_autocorr_window-fct.jpg}
- \caption{GW angular power spectrum for different window functions}
- \label{plot_Cl_window_fct}
-\end{figure} 
-
-\begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{Images/GW_autocorr_z.jpg}
- \caption{GW angular power spectrum for different redshifts}
- \label{plot_Cl_redshift}
-\end{figure} 
-
-As we can see in the Dall'Armi paper the window function and the evolution bias 
+As we can see in \cite{dallarmi_dipole_2022} the window function and the evolution bias 
 depend on the frequency. But this is only the case if we consider not only the
- inspiral phase, but also the merger and ringdown phases. For the inspiral phase
-  only, we have the following:
+inspiral phase but also the merger and ringdown phases. For the inspiral phase we would have the following energy spectrum.
 \begin{equation}
     \frac{dE_{GW}}{df_e d\Omega_e} \propto f_0^{-\frac{1}{3}}(1+z)^{-\frac{1}{3}} .
 \end{equation}
-The window function is proportional to:
+
 \begin{equation}
-    \tilde{W}(z)\propto \frac{f_0(E_{GW}/df_e}{\bar{\Omega}_{AGWB}(f_0)} .
+    \bar{\Omega}_{AGWB}\propto f_0^{\frac{2}{3}}
+\end{equation}
+Considering only the inspiral phase would then make the window function frequency independent.
+\begin{equation}
+    \tilde{W}(z)\propto \frac{f_0(E_{GW}/df_e}{\bar{\Omega}_{AGWB}(f_0)} = const.
 \end{equation}
 
-Since we have $\bar{\Omega}_{AGWB}\propto f_0^{\frac{2}{3}}$, considering only 
-the inspiral phase would make the window function frequency independent and thus the 
-component separation could not work. 
+For that reason, it is necessary to consider all three phases of the merger which we will see in the energy spectrum.
 
 
 \section{Energy Spectrum}
 
 
+
 For the modelling of all three phases we can 
-use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}:
+use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}.
 
 \[ A(f) = C f_1^{-7/6} \begin{cases}
         f'^{-7/6}(1+ \sum_{i=2}^3\alpha_i v^i) & f<f_1 \\
@@ -56,6 +34,13 @@ use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}:
         \omega_r \mathcal{L}(f, f_2, \sigma) & f_2 \leq f < f_3
 \end{cases}
 \]
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{Images/IMR_figure.png}
+    \caption{The three phases of a binary coalescence: inspiral, merger and ringdown.}
+    \label{IMR_figure}
+\end{figure} 
 
 Note that this is the amplitude as a function of the frequency, so a Fourier transform of $A(t)$.
 
@@ -107,11 +92,11 @@ spectrum in the following way.
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Images/dE_df_of_f.png}
-    \caption{The energy spectrum as a function of frequency for a BBH merger, where both BH have a mass of 20$M_\odot\ $. }
+    \caption{The energy spectrum as a function of frequency for a BBH merger where both BH have a mass of 20$M_\odot\ $. }
     \label{dE_df_f}
 \end{figure} 
 
-%\vspace{-5cm}
+
 \begin{figure}
     \centering
     \subfloat[1 Hz]{
@@ -139,9 +124,15 @@ If we plot the energy spectrum as a function of z for different frequencies, see
 \end{equation}
 
 \section{Star Formation Rate}
-\subsection{\textsc{UniverseMachine}}
 
-For the star formation rate, we use the \textsc{UniverseMachine} code from \cite{behroozi_universemachine_2019}. They use observational constraints and data from simulations to compute SFR for individual galaxies. \\
+The BBH merger rate depends on the star formation rate (SFR) which is the rate at which gas and dust are turned into stars. This is relevant since BH are end products of stellar evolution.
+
+\begin{equation}
+    R_{BBH}(z) \propto \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
+\end{equation}
+
+
+For the star formation rate, we use the \textsc{UniverseMachine} code from \cite{behroozi_universemachine_2019}. They use observational constraints and data from simulations to compute SFR for individual galaxies.
 
 In the $\Lambda$CDM cosmology, galaxies form at the centre of haloes. Haloes are gravitationally self-bound structures that contain virialised dark matter. This means that the virial equation applies in this case. Here, $T$ is the potential energy and $U$ is the kinetic energy.
 
@@ -154,10 +145,10 @@ So far, there exists no framework in which we can derive the SFR from first prin
 Dark matter simulations, here Bolshoi-Planck [\cite{klypin_dark_2011}] and MultiDark Planck 2 (MDPL2) \cite{klypin_multidark_2016}, are used, which simulate a mock universe. They contain halo merger trees, which can be compared to observations. Behroozi et al. used data from multiple experiments, such as the Sloan Digital Sky Survey (SDSS) \cite{abazajian_seventh_2009}, Ultravista \cite{mccracken_ultravista_2012}. The observables include stellar mass functions, UV luminosity functions and galaxy auto-correlation functions.
 Using this data, they compute a likelihood and run a Markov Chain Monte Carlo (MCMC) algorithm to sample the SFR range.
 
-Like in \cite{dallarmi_dipole_2022} we consider only star-forming galaxies. This could be modified in a future version of the code by including the fraction of quenched galaxies $f_Q = 1 -f_{SF}$, which could be taken from the \textsc{UniverseMachine} paper as well. The adopted SFR functional form is the following.
+Like in \cite{dallarmi_dipole_2022} we consider only star-forming galaxies. This could be modified in a future version of the code by including the fraction of quenched galaxies $f_Q = 1 -f_{SF}$, which could be taken from the \textsc{UniverseMachine} paper as well. The adopted SFR functional form is the following. The fit parameters depend on the rotational velocity at peak halo mass $v_{Mpeak}$ and on the redshift. This velocity only depends on the halo mass $M_h$, see below.
 
 \begin{equation}
-    SFR_{SF} = \epsilon \left[ \left( v^\alpha + v^\beta \right)^{-1} + \gamma \exp \left(-\frac{\log_{10}(v)^2}{2\delta^2}\right) \right]
+    \langle SFR_{SF}(M_{peak}(v_{Mpeak, z}), z)\rangle = \epsilon \left[ \left( v^\alpha + v^\beta \right)^{-1} + \gamma \exp \left(-\frac{\log_{10}(v)^2}{2\delta^2}\right) \right]
 \end{equation}
 
 The characteristic SFR  in $M_\odot\ yr^{-1}$ is the global factor $\epsilon$. For the slope of the $SFR-v_{Mpeak}$ relation, we have a faint-end and a massive-end slope parameter $\alpha$ and $\beta$, respectively. This is because $v_{Mpeak} \propto M_h^3$ \ref{v_mpeak-M_h-relation}, so a higher velocity at the peak mass corresponds to a higher halo mass.
@@ -190,6 +181,15 @@ The other parameters, except for $\delta$, scale differently for different redsh
     \delta = \delta_0
 \end{equation}
 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Images/sfr_of_v.png}
+    \caption[The SFR for star-forming galaxies for different redshifts.]{The SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref{v_mpeak-M_h-relation}.}
+    \label{SFR_of_v}
+\end{figure} 
+
+
 The median $v_{Mpeak}$ is taken from the \textit{Bolshoi-Planck} DM simulation as
 
 \begin{equation}
@@ -200,22 +200,16 @@ The median $v_{Mpeak}$ is taken from the \textit{Bolshoi-Planck} DM simulation a
     M_{200kms}(a) = \frac{1.64 \cdot 10^{12} M_\odot\ }{()\frac{a}{0.378})^{-0.142}+(\frac{a}{0.378})^{-1.79}} .
 \end{equation}
 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{Images/sfr_of_v.png}
-    \caption{SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref{v_mpeak-M_h-relation}.}
-    \label{SFR_of_v}
-\end{figure} 
-
 \section{Halo Mass Function}
 
-The merger rate of BBH depends on the number of haloes since their formation takes place in haloes. This is why it depends on the halo mass function $\frac{dn}{dM_h}(z_f, M_h)$ integrated over the halo mass. 
+The merger rate of BBH depends on the number of haloes since their formation takes place in haloes. This is why it depends on the halo mass function (HMF) $\frac{dn}{dM_h}(z_f, M_h)$ integrated over the halo mass. 
 \begin{equation}
     R_{BBH}(z) \propto \int dM_h \frac{dn}{dM_h}(z_f, M_h)\langle SFR(M_h, z_f)\rangle_{SF}
 \end{equation}
 
-We first consider the variance of the matter density field $\sigma^2$ which we get from the linear matter power spectrum integrated over the wavenumber $k$ with a window function. This is the Fourier transform of a tophat function in real space with the width $R$, corresponding to the radius of the spherical halo.
+The HMF is the comoving number density of haloes with masses between $M$ and $M+dM$. 
+
+We first consider the variance of the matter density field $\sigma^2$ which we get from the linear matter power spectrum integrated over the wavenumber $k$ with a window function. This is the Fourier transform of a tophat function in real space with the width $R$, corresponding to the radius of the spherical halo. Physically, overfull regions in the universe gravitationally attract and form haloes.
 
 \begin{equation}
     \sigma^2(R, z) = \int_0^\infty k^2 P_{lin}(k, z) W^2(k, R) dk
@@ -243,7 +237,7 @@ The factor $f_{NL}$ accounts for non-linear effects in the halo collapse. There 
     f_{PS}(\sigma)=\sqrt{\frac{2}{\pi}} \frac{\delta_c}{\sigma}\exp(-\frac{\delta_c^2}{2\sigma^2})
 \end{equation}
 
-Here, we use the parametrisation by \cite{tinker_toward_2008}. They use a fitting formula depending on the overdensity $\Delta$. The overdensity characterises how much denser the halo is compared to the average universe density at the corresponding redshift.
+Here, we use the parametrisation by \cite{tinker_toward_2008}. They use a fitting formula depending on the overdensity $\Delta$. The overdensity characterises how much denser the halo is compared to the average universe density $\bar{\rho}_m$ at the corresponding redshift.
 
 \begin{equation}
     \Delta = \frac{3M_{\Delta}}{4\pi R^3_{\Delta}\bar{\rho_m}}
@@ -287,13 +281,15 @@ To show how the redshift and the overdensity influence the HMF, we vary the para
     \subfloat[{The dimensionless HMF for different overdensity parameters $\Delta$ at $z=0$.}
         \label{HMF_delta}]{
         \includegraphics[width=7.5cm, clip]{Images/HMF_diff_delta.png}}
-    \subfloat[The halo mass function in units of $\frac{h/M_\odot}{(Mpc/h)^3}$ or respectively $\frac{h^4}{M\odot Mpc^3}$ with $\Delta=800$, here at $z=0$.
+    \subfloat[The HMF in units of $\frac{h/M_\odot}{(Mpc/h)^3}$ or respectively $\frac{h^4}{M\odot Mpc^3}$ with $\Delta=800$, here at $z=0$.
         \label{HMF_dim}]{
         \includegraphics[width=7.5cm, clip]{Images/HMF.png}}
-    \caption{}
+    \caption{The HMF at $z=0$.}
 \end{figure} 
 
 \section{Merger Rate}
+
+With the SFR and the HMF, we can now calculate the BBH merger rate.
 \begin{equation}
     R_{BBH}(z=0) = 19 \:\rm{Gpc}^{-3}\rm{yr}{-1}
 \end{equation}
@@ -302,14 +298,26 @@ To show how the redshift and the overdensity influence the HMF, we vary the para
     \label{BBH_merger_equation}
 \end{equation}
 
-Here, we have the time delay distribution $p(t_d)$, where the time delay is between the formation and the merger of the binary. (physical explanation)
+Here, we have the time delay distribution $p(t_d)$, where the time delay takes place between the formation and the merger of the binary. 
 
-\begin{figure}[h]
+\begin{equation}
+    p(t_d)=\ln\left(\frac{t(z)}{t_{d, min}}\right)\frac{1}{t_d}
+\end{equation}
+
+The minimum time delay is 50 Myr, like in \cite{dallarmi_dipole_2022}. 
+
+The merger rate is also multiplied by a normalisation factor $\mathcal{A}_{LIGO}^{BBH}$, corresponding to the local merger rate estimated by LIGO/Virgo (\cite{the_ligo_scientific_collaboration_population_2022}).
+
+\begin{equation}
+    R_{BBH}(0)=19 \; \frac{1}{\rm{Gpc}^3\rm{yr}}
+\end{equation}
+
+\begin{figure}
     \centering
-    \includegraphics[width=1\linewidth]{Images/bbh_merger_rate.png}
-    \caption{BBH merger rate as a function of the redshift z}
+    \includegraphics[width=0.9\linewidth]{Images/bbh_merger_rate.png}
+    \caption{The BBH merger rate as a function of the redshift z.}
     \label{bbh_merger_rate}
-   \end{figure} 
+\end{figure} 
 
 
 \section{Window Function}
@@ -318,35 +326,39 @@ Here, we have the time delay distribution $p(t_d)$, where the time delay is betw
 In Dall'Armi et al. \cite{dallarmi_dipole_2022} we see that the frequency dependence 
 of the dipole comes from the evolution bias and the window function. The evolution 
 bias accounts for the fact that more sources are created with time. The window 
-function is used when we integrate the source functions over the redshift. 
+function is used when we integrate the source functions over the redshift. It weights different redshift regions of the source functions depending on which ones are important for the observable, in this case GW.
+
+
+\begin{equation}
+    \delta_{AGWB}(f_o, \hat{n})=\frac{\Omega_{AGWB}(f_o, \hat{n})-\bar{\Omega}_{AGWB}(f_o)}{\bar{\Omega}_{AGWB}(f_o)}
+\end{equation}
 
 \begin{equation}
 \label{window_fct_int}
-    \delta_{AGWB}(f_0, \hat{n})=\int dz \tilde{W}(f_0, z)\Delta_{AGWB}(f_0, \hat{n}, z)
+    =\int dz \tilde{W}(f_0, z)\Delta_{AGWB}(f_0, \hat{n}, z)
 \end{equation}
 
 
-We can then Fourier and Legendre transform the GW density contrast:
-\begin{equation}
-    \delta_X(f_0, \vec{k}) = \int \frac{d^3\vec{x}}{(2\pi)^\frac{3}{2}} 
-    \delta_X(f_0, \vec{x})
-\end{equation}
-\begin{equation}
-    \Delta_l(k, f_0) = \int d\phi \int d\mu \mathcal{P}_l(\mu) 
-    \delta(\vec{k}, f_0)
-\end{equation}
+In the standard version without frequency dependence, we can already see the influence of the different window functions and redshift ranges.
 
-From that, we can calculate the angular power spectrum using the primordial power 
-spectrum:
+The different window functions are plotted in Fig.\ref{plot_Cl_window_fct}. The window function determines which part of our source function we count for the density contrast. In the case of a Dirac distribution, we count all parts and skip the integration. This is why that window function leads to a higher angular power spectrum.\\
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\linewidth]{Images/diff_windows.png}
+ \caption{GW angular power spectrum for different window functions.}
+ \label{plot_Cl_window_fct}
+\end{figure} 
 
-\begin{equation}
-    C_l = 4\pi \int \frac{dk}{k} P(k) \Delta_l \Delta_l^*
-\end{equation}
+We can see the GW angular power spectrum for different redshifts in Fig.\ref{plot_Cl_redshift}.
+The anisotropies are higher for smaller redshifts. This is due to the fact that we have more GW sources at lower redshifts due to structure formation growing linearly with the scale factor $a$.
 
-Here, X and Y can be the intrinsic, shot noise or kinematic (dipole) contribution.
-Note, that this $\Delta$ is not the same as in equation \ref{window_fct_def}.
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\linewidth]{Images/diff_window_z.png}
+ \caption{GW angular power spectrum for different redshifts.}
+ \label{plot_Cl_redshift}
+\end{figure} 
 
-The window function depends upon others on the binary black hole merger rate.
 \begin{equation}
 \label{window}
     \tilde{W}(z, f_0)=\frac{f_0}{\rho_c c^2 \bar{\Omega}_{AGWB}(f_0)}
@@ -363,14 +375,14 @@ The window function is normalised using the monopole, which is the same expressi
     = \frac{f_0}{\rho_c c^2 } \int \frac{dz}{(1+z)H(z)} R_{BBH}(z) \frac{dE_{GW}}{df_e d\Omega_e}(f_e)
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{Images/window_comparison.png}
-    \caption{The final window function at 1 Hertz for this code in blue for comparison with \cite{dallarmi_dipole_2022} in orange.}
+    \caption[The final window function at 1 Hertz for this code for comparison with \cite{dallarmi_dipole_2022}.]{The final window function at 1 Hertz for this code in blue for comparison with \cite{dallarmi_dipole_2022} in orange.}
     \label{window_comparison}
 \end{figure} 
 %\vspace{-5cm}
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Images/window_diff_frequencies.png}
     \caption{The window functions at different observed frequencies.}
@@ -378,15 +390,46 @@ The window function is normalised using the monopole, which is the same expressi
 \end{figure} 
 
 
+We then Fourier and Legendre transform the GW density contrast to get Legendre polynomials corresponding to multipoles on the sphere.
+\begin{equation}
+    \delta_X(f_0, \vec{k}) = \int \frac{d^3\vec{x}}{(2\pi)^\frac{3}{2}} 
+    \delta_X(f_0, \vec{x})
+\end{equation}
+\begin{equation}
+    \Delta_l(k, f_0) = \int d\phi \int d\mu \mathcal{P}_l(\mu) 
+    \delta(\vec{k}, f_0)
+\end{equation}
+
+From that, we can calculate the angular power spectrum using the primordial power 
+spectrum.
+
+\begin{equation}
+    C_l = 4\pi \int \frac{dk}{k} P(k) \Delta_l \Delta_l^*
+\end{equation}
+
+Note, that this $\Delta$ is not the same as in equation \ref{window_fct_def}.
+
+
 \section{Bias \& Magnification Bias}
-\textit{change style}
+
+If we see GW as a tracer of the underlying dark matter density field, we have to introduce a bias for this tracer, where $\delta$ is again the density contrast.
+
+\begin{equation}
+    \delta_{DM}=b_{GW}\delta_{GW}
+\end{equation}
+
+\cite{scelfo_gwtimeslss_2018} find this bias to be $1.81$ considering BH from the end-point of stellar evolution (as opposed to primordial BH).
+
+Another bias we consider is the magnification bias. It accounts for gravitational lensing which increases the area of the source and thus decreases the observed number density. Furthermore, fainter object can reach the magnitude threshold due to gravitational lensing.
 
 If one compares the contributions to $\Delta_l^{\rm{AGWB}}$ between {\tt CLASSgal} and the Dall'Armi paper \cite{dallarmi_dipole_2022}, the magnification bias has to be  $s=\frac{2}{5}$ for the expressions to match. To find out why this is the case, I tried some calculations with $\frac{dN}{dz}$, but could not match this value.  After reading the paper by Bertacca et al. \cite{bertacca_projection_2020} (recommended by Lorenzo), one can see that they derive their expressions from 
 first principles without introducing the magnification bias separately. 
 
 \section{Evolution Bias}
 \label{evo_bias_section}
-The evolution bias accounts for the creation of new sources. This is why it depends on the redshift derivative of the merger rate and the energy spectrum of one merger. We can write this in terms of the derivative of the GW energy flux of the scale factor $a$.
+The evolution bias accounts for the creation of new sources. This is why it depends on the redshift derivative of the merger rate and the energy spectrum of one merger. 
+It enters in the projection effects in section \ref{projection_effects}.
+We can write this in terms of the derivative of the GW energy flux of the scale factor $a$.
 \begin{equation}
     b_e(f_0, z) = \frac{d\ln(F)}{d\ln(a)}(f_0, z)
 \end{equation}
@@ -398,4 +441,13 @@ The energy flux of GW is a product of the energy spectrum of one binary, using t
     F(f_0, z) = R_{BBH}(z) \frac{d E_{GW}}{df_e d\Omega_e}(f_0, z)
 \end{equation}
 
-It makes sense to use an Einstein-Boltzmann solver, like CLASS (cite), since the formalism of computing the angular power spectrum is similar to doing this for galaxy counts.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Images/evo_bias_test.png}
+    \caption{The influence of the evolution bias on the angular power spectrum at an observed frequency of 1000 Hertz.}
+    \label{evo_bias_plot}
+\end{figure} 
+
+In Fig.\ref{evo_bias_plot}, we show the computed angular power spectrum with and without the evolution bias. We can see that it barely influences the overall power spectrum. Computationally, it takes much longer to consider it since the merger rate and energy spectrum are computed again at every step. The merger rate for example contains an integral over the halo mass which increases the runtime.
+Because of this minor influence, we neglect the evolution when computing the angular power spectra, but it can easily be activated and deactivated in the {\tt Multi\_CLASS} initialisation file ({\tt disable\_gw\_evo\_bias}).
+

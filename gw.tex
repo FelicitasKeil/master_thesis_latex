@@ -132,7 +132,7 @@ To illustrate plus and cross polarisations, Fig. \ref{polarisation} shows both o
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{Images/polarisations.png}
-    \caption{Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.}
+    \caption[Illustration of the plus and cross polarisations varying with time.]{Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.}
     \label{polarisation}
 \end{figure} 
 
@@ -272,17 +272,15 @@ The energy density parameter is the frequency-dependent monopole integrated over
 \end{equation}
 
 \subsection{Astrophysical}
+\label{astro_GWB}
 GW can be created by different sources. Considering astrophysical sources, they can come from
 merging binaries, bursts (e.g. from core-collapse supernovae) or continuous waves 
 (e.g. from pulsars). 
 The AGWB consists mostly of compact object mergers, which are mainly black holes and neutron stars. 
 
-Anisotropy limits from LIGO:
-(check for more current)
-The LIGO anisotropy limit for the first observing run O1 published in 2017
-was 
+The current GW detectors like LIGO, Virgo and KAGRA (LVK) have not detected a GW background yet, but they have set upper limits from their third observing run. Assuming a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes \cite{phinney_practical_2001}, they arrive at the following integrated energy density.
 \begin{equation}
-    \Omega_{2/3} = (4.4 \pm 6.4) \cdot 10^{-8} .
+    \Omega_{2/3, LIGO} = (3.4 \pm 6.1) \cdot 10^{-9}
 \end{equation}
 
 This is compatible with zero, but an anisotropic background would indicate
@@ -290,9 +288,14 @@ a more interesting cosmology, which is why it would be important to disentangle
 any anisotropic that could be observed.
 
 The AGWB was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as accurate clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a GW background. 
-The NANOGrav experiment used a frequency range of $10^{-8.75} - 10^{-7.5}$ Hz. They assumed a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes. \cite{phinney_practical_2001}
-Using this, they find an integrated energy density $\Omega_{GW} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}$.
+The NANOGrav experiment used a frequency range of $10^{-8.75} - 10^{-7.5}$ Hz. 
+Also assuming a frequency power law of $f^{-2/3}$, they find the following integrated energy density.
 
+\begin{equation}
+    \Omega_{2/3, NANOGrav} = 9.3^{+5.8}_{-4.0}\cdot 10^{-9}
+\end{equation}
+
+This is higher than the upper limit from LVK, but we have to keep in mind that the analysed frequency range is different for both experiments.
 
 \subsubsection{Binary Black Hole Mergers}
 \label{BBH_mergers}
@@ -309,7 +312,7 @@ If we consider the energy density parameter of the stochastic GW background, we 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{Images/Capurri_GW_Background_monopole_sources.png}
-    \caption{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite{capurri_intensity_2021}.} 
+    \caption[The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.]{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite{capurri_intensity_2021}.} 
     \label{BG_sources}
 \end{figure} 
 
@@ -318,7 +321,7 @@ In this figure, all three curves are normalised to the local merger rate from th
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{Images/waveform_abbott_complete.png}
-    \caption{The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite{abbott_observation_2016}.}
+    \caption[The different stages of a BBH merger with the corresponding waveform.]{The different stages of a BBH merger with the corresponding waveform, here an illustrative estimate of GW150914. The Figure is taken from Ref.\ \cite{abbott_observation_2016}.}
     \label{GW_waveform}
 \end{figure} 
 
@@ -347,6 +350,7 @@ The GW density contrast can be written with an integration over the window funct
 \end{equation}
 
 \subsection{Cosmological}
+\label{cosmo_bg}
 The major contributions to the cosmological GW background are primordial
 black holes and GW from phase transitions and inflation.
 Schulze et al. \cite{schulze_gw_class_2023} computed the angular power spectrum of this background using a modified version of CLASS \cite{blas_cosmic_2011} called {\tt GW\_CLASS}.
@@ -388,13 +392,25 @@ The GW created through large-scale perturbations during inflation are relevant f
 
 \subsection{Number Density Distribution}
 
+Here, we use the {\tt Multi\_CLASS} code, an extension of the {\tt CLASS} code by \cite{bellomo_beware_2020}. It was written to adapt the Einstein-Boltzmann solver to gravitational waves. In the computation of the source functions (section \ref{projection_effects}), it omits the Limber approximation. This approximation simplifies spherical Bessel functions as Dirac distributions. The spherical Bessel functions are related to the ordinary Bessel functions in the following way.
+
+\begin{equation}
+    j_n(x)=\sqrt{\frac{\pi}{2x}}J_{n+1/2}(x)
+\end{equation}
+
+The ordinary Bessel functions are defined with the gamma function.
+
+\begin{equation}
+    J_n(x)=\sum_{m=0}^\infty \frac{(-1)^m}{m!\Gamma(m+n+1)}\left(\frac{x}{2}\right)^{2m+n}
+\end{equation}
+
 The {\tt Multi\_CLASS} code uses the number density of detectable GW per redshift per solid angle element from \cite{scelfo_gwtimeslss_2018}:
 
 \begin{equation}
     \frac{d^2N_{GW}}{dzd\Omega} = T_{obs}\frac{c\chi^2(z)}{(1+z)H(z)}R_{tot}(z)F_{GW}^{detectable}(z).
 \end{equation}
 
-$T_{obs}$ is the total observational time, $\chi(z)$ is the comoving distance, $H(z)$ is the Hubble rate, $R_{tot}(z)$ is the total comoving merger rate and $F_{GW}^{detectable}(z)$ the fraction of detectable events. For the merger rate, they include primordial black holes and binary BH (abbr) in their calculation.
+$T_{obs}$ is the total observational time, $\chi(z)$ is the comoving distance, $H(z)$ is the Hubble rate, $R_{tot}(z)$ is the total comoving merger rate and $F_{GW}^{detectable}(z)$ the fraction of detectable events. For the merger rate, they include primordial BH and BBH in their calculation.
 The authors choose the common SNR threshold $\langle \rho^2 \rangle =8$.
 \begin{equation}
     \langle \rho^2 \rangle = \frac{1}{5}\int_{f_{min}}^{f_{max}} df \frac{h_c^2(f)}{f^2 S_n(f)}
@@ -403,6 +419,7 @@ The authors choose the common SNR threshold $\langle \rho^2 \rangle =8$.
 For the Einstein Telescope (ET), they find that $F_{GW}^{detectable} \approx 1$ even for redshifts above 5, which have a small effect on the detection overall.
 
 \subsection{Projection Effects}
+\label{projection_effects}
 
 \textit{change style,}
 \textit{explain physics-> papers Yoo, Bonvin}
