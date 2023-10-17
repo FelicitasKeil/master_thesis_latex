@@ -23,8 +23,6 @@ For that reason, it is necessary to consider all three phases of the merger whic
 
 \section{Energy Spectrum}
 
-
-
 For the modelling of all three phases we can 
 use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}.
 
@@ -105,7 +103,7 @@ spectrum in the following way.
     \subfloat[10 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_10Hz.png}}
     \\
-    %\vspace{-1.00\baselineskip}
+    \vspace{-0.5cm}
     \subfloat[100 Hz]{
         \includegraphics[width=7.5cm, clip]{Images/E_spectrum_z_100Hz.png}}
     %\hspace{-2.00\baselineskip}
@@ -118,10 +116,11 @@ spectrum in the following way.
 
 If we plot the energy spectrum as a function of z for different frequencies, see Fig. \ref{dE_df_diff_frequencies}, we can see different sections of Fig. \ref{dE_df_f}. This is because $d^2 E_{GW,e}/df_e d\Omega_e$ only depends on z through the emitted frequency. The energy spectrum is written as a function of $f_e$, but we implement it in such a way that the user can choose the received frequency at the detector.
 
-
 \begin{equation}
     f_e = (1+z)f_0
 \end{equation}
+
+At lower frequencies, like 1 Hertz, the the energy spectrum consists of the inspiral phase. At 10 Hertz, we can see the transition from the inspiral to the merger phase. The transition to the ringdown is visible at 100 Hertz. At high frequencies such as 1000 Hertz, the ringdown phase dominates at all redshifts.
 
 \section{Star Formation Rate}
 
@@ -160,6 +159,15 @@ The velocity $v$ is defined as the ratio of the real ($v_{Mpeak})$ and the chara
     v = \frac{v_{Mpeak}}{V \cdot km s^{-1}}
 \end{equation}
 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Images/sfr_of_v.png}
+    \caption[The SFR for star-forming galaxies for different redshifts.]{The SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref{v_mpeak-M_h-relation}.}
+    \label{SFR_of_v}
+\end{figure} 
+
 The other parameters, except for $\delta$, scale differently for different redshift regions. For $V$, $\epsilon$ and $\alpha$, the scaling is separated into $z=0$, $z\approx 1-2$, $z=3-7$ and $z>7$. The parameters $\beta$ and $\gamma$ have three scaling regions instead of four, as they are not well constrained at high redshifts. 
 
 \begin{equation}
@@ -181,13 +189,6 @@ The other parameters, except for $\delta$, scale differently for different redsh
     \delta = \delta_0
 \end{equation}
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{Images/sfr_of_v.png}
-    \caption[The SFR for star-forming galaxies for different redshifts.]{The SFR for star-forming galaxies for different redshifts. The velocity at the historical peak halo mass corresponds to the standard halo mass, see equation \ref{v_mpeak-M_h-relation}.}
-    \label{SFR_of_v}
-\end{figure} 
 
 
 The median $v_{Mpeak}$ is taken from the \textit{Bolshoi-Planck} DM simulation as
@@ -429,6 +430,14 @@ first principles without introducing the magnification bias separately.
 \label{evo_bias_section}
 The evolution bias accounts for the creation of new sources. This is why it depends on the redshift derivative of the merger rate and the energy spectrum of one merger. 
 It enters in the projection effects in section \ref{projection_effects}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{Images/evo_bias_test.png}
+    \caption{The influence of the evolution bias on the angular power spectrum at an observed frequency of 1000 Hertz.}
+    \label{evo_bias_plot}
+\end{figure} 
+
 We can write this in terms of the derivative of the GW energy flux of the scale factor $a$.
 \begin{equation}
     b_e(f_0, z) = \frac{d\ln(F)}{d\ln(a)}(f_0, z)
@@ -441,12 +450,7 @@ The energy flux of GW is a product of the energy spectrum of one binary, using t
     F(f_0, z) = R_{BBH}(z) \frac{d E_{GW}}{df_e d\Omega_e}(f_0, z)
 \end{equation}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{Images/evo_bias_test.png}
-    \caption{The influence of the evolution bias on the angular power spectrum at an observed frequency of 1000 Hertz.}
-    \label{evo_bias_plot}
-\end{figure} 
+
 
 In Fig.\ref{evo_bias_plot}, we show the computed angular power spectrum with and without the evolution bias. We can see that it barely influences the overall power spectrum. Computationally, it takes much longer to consider it since the merger rate and energy spectrum are computed again at every step. The merger rate for example contains an integral over the halo mass which increases the runtime.
 Because of this minor influence, we neglect the evolution when computing the angular power spectra, but it can easily be activated and deactivated in the {\tt Multi\_CLASS} initialisation file ({\tt disable\_gw\_evo\_bias}).

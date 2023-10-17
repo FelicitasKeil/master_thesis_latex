@@ -230,6 +230,80 @@ The wave field for non-relativistic sources is thus:
     \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{8\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\frac{\partial^2}{\partial t^2}\left(Q_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{Q} \; \vec{r}\right)
 \end{equation}
 
+To get the Hamiltonian density, we introduce the conjugate momentum field $\pi_{ij}$.
+
+\begin{equation}
+    \pi_{ij}=\dot{h}_{ij}-\delta_{ij}\dot{h}_{kk}+2\delta_{ij}\partial_k
+N_k-\partial_i N_j-\partial_j N_i 
+\end{equation}
+
+This contains the auxiliary fields $N=-h_{00}$ and $N_i=h_{0i}$.
+Then, we can calculate the Hamiltonian in the standard way.
+\begin{equation}
+    \mathcal{H}=\partial_t \underline{h}^{\mu\nu}-\mathcal{L}[h]
+\end{equation}
+\begin{equation}
+    =\frac{1}{2}(\nabla h_{\mu\nu})^2-\kappa \underline{h}^{\mu\nu}T_{\mu\nu}
+\end{equation}
+
+The energy in a certain volume changes with time depending on the divergence of the momentum flux integrated over the same volume.
+
+\begin{equation}
+    \frac{dE_V}{dt}=-\int_V d^3x \nabla\cdot \Pi
+\end{equation}
+
+The momentum flux depends on the time and space derivatives of the GW strain.
+
+\begin{equation}
+    \Pi=-\nabla \underline{h}^{\mu\nu}\partial_t \underline{h}_{\mu\nu}
+\end{equation}
+
+If we consider a plane wave in z-direction, we have the following strain, where $a,b =(1, 2)$ and $h_{0i}=h_{3i}=0$.
+
+\begin{equation}
+    h_{ab} =e_{ab}\cos(\omega(t-z/c))
+\end{equation}
+
+\begin{equation}
+    e_{ab}=
+    \begin{pmatrix}
+        e_+ & e_\times \\
+        e_\times & -e_+
+    \end{pmatrix}
+\end{equation}
+
+Then, we arrive at the energy flux time per area at the z-coordinate 0.
+
+\begin{equation}
+    \frac{dE}{dAdt}\left.\right|_{z=0} = (\hat{n}\cdot \Pi)\left.\right|_{z=0}
+\end{equation}
+
+\begin{equation}
+    \partial_t h_{ab}\nabla_z h_{ab}\left.\right|_{z=0}
+\end{equation}
+
+\begin{equation}
+    -\frac{2\omega^2}{c}(e_+^2 + e_\times^2)\sin^2(\omega t)
+\end{equation}
+
+We can average this energy loss through GW over time. This is useful since we will also consider the stochastic background averaged over time. We consider the metric perturbations from the beginning for this expression.
+
+\begin{equation}
+    a_{ij}=g_{ij}-\delta_{ij}=2\kappa h_{ij}
+\end{equation}
+
+\begin{equation}
+    \Rightarrow \bar{\frac{dE}{dAdt}}=\frac{\pi c^3f^2}{8G}(a_+^2+a_\times^2)
+\end{equation}
+
+We will use a similar form of the GW energy but derived by the frequency later for computing the anisotropies.
+
+In the following, we will not use the more standard definition of $h_{ij}$ without the $\kappa$ factor.
+
+\begin{equation}
+    h_{\mu\nu} = g_{\mu\nu}-\eta_{\mu\nu}
+\end{equation}
+
 \section{Stochastic Background}
 The stochastic GW background consists of all sources that are too faint to be resolved individually, thus it is a superposition of many independent sources. The same source can contribute to multiple frequencies over time. 
 The biggest background comes from astrophysical sources, like compact object mergers, but there is also a smaller cosmological background present. That one originates from early universe phenomena. 
@@ -325,30 +399,6 @@ In this figure, all three curves are normalised to the local merger rate from th
     \label{GW_waveform}
 \end{figure} 
 
-From the waveform, we can extrapolate black hole properties, like the chirp mass and the spin. 
-
-\begin{equation}
-    \mathcal{M}_c = \frac{(m_1m_2)^{3/5}}{(m_1+m_2)^{1/5}}
-\end{equation}
-
-The frequency is determined by the total mass. 
-The waveform can be decomposed into harmonic, where the quadrupole ($(\ell, m)=(2,2)$) is naturally the dominant one. 
-(insert from Bonn lectures?)
-
-
-\subsubsection{Dipole}
-The cosmological principle says, that the universe is isotropic and homogeneous on large scales. GW are one mode of testing this further. If we find anisotropies in the GW background, other than the kinematic dipole and shot noise, this would be evidence against the principle.
-The kinematic dipole arises from the observer motion with respect to the large-scale structure rest frame. More GW events should be detected in the direction in which we move, and fewer in the opposite direction. Shot noise comes from stochastic fluctuations in the background, which follow a Poisson distribution.
-
-The GW density contrast can be written with an integration over the window function, which weights the contributions in the redshift domain.
-
-\begin{equation}
-    \delta(f_0, \hat{n}) = \frac{\Omega(f_0, \hat{n})-\overline{\Omega}(f_0)}{\overline{\Omega}(f_0)}
-\end{equation}
-\begin{equation}
-    = \int dz \; W(f_0, z) \; \Delta(f_0, \hat{n}, z)
-\end{equation}
-
 \subsection{Cosmological}
 \label{cosmo_bg}
 The major contributions to the cosmological GW background are primordial
@@ -421,10 +471,8 @@ For the Einstein Telescope (ET), they find that $F_{GW}^{detectable} \approx 1$ 
 \subsection{Projection Effects}
 \label{projection_effects}
 
-\textit{change style,}
-\textit{explain physics-> papers Yoo, Bonvin}
-
-For the intrinsic anisotropies, there are different contributions to the source functions $\Delta_l^{AGWB}$. The different pertinent effects are density fluctuations, redshift space distortions, the Doppler effect and relativistic corrections or gravitational potential terms. \cite{di_dio_classgal_2013}.
+While GW travel towards us, they can be distorted by various effects. Mathematically, this comes through the integration along the line of sight.
+For the intrinsic anisotropies, there are four different contributions to the source functions $\Delta_l^{AGWB}$. The different pertinent effects are density fluctuations, redshift space distortions, the Doppler effect and relativistic corrections or gravitational potential terms. \cite{di_dio_classgal_2013}.
 
 We write each random field as a product of the primordial curvature perturbation and a transfer function. In \cite{dallarmi_dipole_2022}, they compute the different source terms using the {\tt CLASSgal} framework. The implementation in {\tt CLASS} follows the same framework, since {\tt CLASSgal} has been merged into the standard public code.
 
@@ -482,38 +530,5 @@ There are five relativistic corrections, which can also be called gravitational 
 \end{equation}
 
 In the last equation, $n^i$ are the components of the line of sight vector.
-
-\begin{equation}
-    \label{window_fct_def}
-        \delta_{AGWB}(f_0, \hat{n})=\int dz \tilde{W}(f_0, z)\Delta_{AGWB}(f_0, \hat{n}, z)
-    \end{equation}
-
-\begin{equation}
-    \begin{split}
-        = \int d\bar{\chi} \tilde{W} [b(\delta_m - 3\mathcal{H}V)+(3-b_e)\mathcal{H}V+
-        \Psi(3-b_e+\frac{\mathcal{H'}}{\mathcal{H}^2})+2I(b_e
-        -\frac{\mathcal{H'}}{\mathcal{H}^2}-2) \\
-        +(\delta a_0+\Psi_0 - v_{\parallel 0})(b_e
-        -\frac{\mathcal{H'}}{\mathcal{H}^2}-2)-v_\parallel (-b_e
-        +\frac{\mathcal{H'}}{\mathcal{H}^2}+2) \\
-        +\frac{1}{\mathcal{H}}\Phi' 
-        -\frac{1}{\mathcal{H}}\partial_\parallel v_\parallel 
-        - \frac{1}{2\mathcal{H}}h_{ij}'^{TT} n^i n^j]
-    \end{split}
-    \end{equation}
-    Here the following notation is used:
-    \begin{equation}
-            v_\parallel = \hat{n} \vec{v} 
-    \end{equation}
-    \begin{equation}
-            \partial{\parallel} = \hat{n} \vec{\nabla} 
-    \end{equation}
-    \begin{equation}
-            I(\bar{\chi}) = -\frac{1}{2} \int_0^{\bar{\chi}} d\tilde{\chi} 
-            (\Psi' + \Phi ' -\frac{1}{2}h_{ij}')(\tilde{\chi} )
-    \end{equation}
-    \begin{equation}
-            \vec{v} = \vec{\nabla} V 
-    \end{equation}
-
+All these effects are weighted with the window function to compute the GW density contrast, which will be discussed in section \ref{window_fct_section}.
 

@@ -6,9 +6,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the plus and cross polarisations varying with time.}}{9}{figure.caption.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.}}{13}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.}}{14}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform.}}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform.}}{15}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -50,52 +50,50 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Design sensitivity curves for the LVK detector network.}}{34}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Noise sensitivity with respect to frequency for LVK.}}{34}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Noise sensitivity with respect to frequency for LVK. }}}{34}{subfigure.1.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{35}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The noise angular power spectrum for LVK. }}}{34}{subfigure.1.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.}}{35}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.}}{35}{figure.caption.22}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The noise angular power spectrum for different detectors at a reference frequency of 63 Hertz.}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The noise angular power spectrum for different detectors at a reference frequency of 63 Hertz.}}{36}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of using the {\tt NIFTy} code to reconstruct an input power spectrum.\relax }}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of using the {\tt NIFTy} code to reconstruct an input power spectrum.\relax }}{39}{figure.caption.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The power spectra of the one-dimensional toy model.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The power spectra of the one-dimensional toy model.}}{39}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces AGWB angular power spectrum of different observed frequencies, going up to $l=30$.\relax }}{41}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AGWB angular power spectrum of different observed frequencies, going up to $l=30$.\relax }}{41}{figure.caption.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The dipole of the AGWB at different observed frequencies.\relax }}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The dipole of the AGWB at different observed frequencies.\relax }}{41}{figure.caption.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the computed dipole contribution to \cite {dallarmi_dipole_2022}.}}{42}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the computed dipole contribution to \cite {dallarmi_dipole_2022}.}}{42}{figure.caption.29}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{This work} }}}{42}{subfigure.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{\cite {dallarmi_dipole_2022}} }}}{42}{subfigure.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Reconstruction of the AGWB at 100 Hertz on a sky map using the {\tt NIFTy} code.}}{43}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Reconstruction of the AGWB at 100 Hertz on a sky map using the {\tt NIFTy} code.}}{43}{figure.caption.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The power spectra of the AGWB separation at 100 Hertz.}}{44}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The power spectra of the AGWB separation at 100 Hertz.}}{44}{figure.caption.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of the AGWB at 400 Hertz on a sky map using the {\tt NIFTy} code.}}{45}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of the AGWB at 400 Hertz on a sky map using the {\tt NIFTy} code.}}{45}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The power spectra of the AGWB separation at 400 Hertz.}}{46}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The power spectra of the AGWB separation at 400 Hertz.}}{46}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Frequency dependence of the monopole of the cosmological GW background for different generation mechanisms.}}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Frequency dependence of the monopole of the cosmological GW background for different generation mechanisms.}}{47}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.9}{\ignorespaces A comparison of the angular power spectra of the astrophysical versus the inflationary cosmological GW background at 900 Hertz.\relax }}{47}{figure.caption.34}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces A comparison of the angular power spectra of the astrophysical versus the inflationary cosmological GW background at 900 Hertz.\relax }}{47}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Reconstruction of the CGWB at 900 Hertz on a sky map using the {\tt NIFTy} code.}}{48}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Reconstruction of the CGWB at 900 Hertz on a sky map using the {\tt NIFTy} code.}}{48}{figure.caption.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The power spectra of the CGWB separation at 900 Hertz.}}{49}{figure.caption.36}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The power spectra of the CGWB separation at 900 Hertz.}}{49}{figure.caption.37}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{52}{figure.caption.37}%
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{52}{figure.caption.38}%
