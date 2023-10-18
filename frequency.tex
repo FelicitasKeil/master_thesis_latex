@@ -7,7 +7,7 @@ As we can see in \cite{dallarmi_dipole_2022} the window function and the evoluti
 depend on the frequency. But this is only the case if we consider not only the
 inspiral phase but also the merger and ringdown phases. For the inspiral phase we would have the following energy spectrum.
 \begin{equation}
-    \frac{dE_{GW}}{df_e d\Omega_e} \propto f_0^{-\frac{1}{3}}(1+z)^{-\frac{1}{3}} .
+    \frac{dE^2_{GW}}{df_e d\Omega_e} \propto f_0^{-\frac{1}{3}}(1+z)^{-\frac{1}{3}} .
 \end{equation}
 
 \begin{equation}
@@ -15,7 +15,7 @@ inspiral phase but also the merger and ringdown phases. For the inspiral phase w
 \end{equation}
 Considering only the inspiral phase would then make the window function frequency independent.
 \begin{equation}
-    \tilde{W}(z)\propto \frac{f_0(E_{GW}/df_e}{\bar{\Omega}_{AGWB}(f_0)} = const.
+    \tilde{W}(z)\propto \frac{f_0(d^2 E_{GW}/df_e d\Omega_e)}{\bar{\Omega}_{AGWB}(f_0)} = const.
 \end{equation}
 
 For that reason, it is necessary to consider all three phases of the merger which we will see in the energy spectrum.
@@ -23,8 +23,8 @@ For that reason, it is necessary to consider all three phases of the merger whic
 
 \section{Energy Spectrum}
 
-For the modelling of all three phases we can 
-use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}.
+
+For the modelling of all three phases of the binary coalescence we can use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}. The phases are inspiral, merger and ringdown, as shown schematically in Fig. \ref{IMR_figure}. This is all done in geometric units $G=c=1$.
 
 \[ A(f) = C f_1^{-7/6} \begin{cases}
         f'^{-7/6}(1+ \sum_{i=2}^3\alpha_i v^i) & f<f_1 \\
@@ -41,12 +41,19 @@ use the waveform by \cite{ajith_inspiral-merger-ringdown_2011}.
 \end{figure} 
 
 Note that this is the amplitude as a function of the frequency, so a Fourier transform of $A(t)$.
+Here, $f'$ is a frequency ratio using the first transition frequency, see below. 
 
 \begin{equation}
-    A(f) =  \frac{1}{\sqrt{2\pi}}\int_\mathbb{R} A(t) e^{-ift} dt
+    f'=\frac{f}{f_1}
 \end{equation}
 
-The parameters $\omega_m$ and $\omega_r$ are used to make the function continuous. For the ringdown, we have a Lorentzian function centred around the merger to ringdown transition frequency $f_2$ with the width $\sigma$. The parameters $\alpha_i$ are post-Newtonian corrections.
+The parameter $\nu$ is dimensionless since we are working in geometric units.
+
+\begin{equation}
+    \nu=(\pi M f)^(1/3)
+\end{equation}
+
+The parameters $\omega_m$ and $\omega_r$ are used to make the function continuous and thus are dependent on the total mass $M=m_1+m_2$. The parameters $\alpha_i$ are post-Newtonian corrections. They are calculated using general relativity and their values are shown in Table \ref{amplitude_param} along with the values for $\epsilon_i$. they are listed with and without the zero-spin approximation which we use in this work.
 
 \begin{table}[h]
     \begin{center}
@@ -62,7 +69,7 @@ The parameters $\omega_m$ and $\omega_r$ are used to make the function continuou
     \end{center}
 \end{table}
 
-The frequency $f_1$ at the transition of the inspiral and merger phase is the last stable orbit of the binary. Once the merger phase has started the orbits cease to be stable since the objects start to fall in. This frequency was calculated by \cite{bardeen_rotating_1972}.
+The frequency $f_1$ at the transition of the inspiral and merger phase is the last stable orbit of the binary. Once the merger phase has started the orbits cease to be stable since the objects start to fall in. This corresponds to a maximum of the effective potential. The frequency was calculated by \cite{bardeen_rotating_1972}.
 
 \begin{equation}
     f_1 = \frac{c^3}{6^{3/2}2\pi M_{tot} G}
@@ -74,11 +81,38 @@ The transition frequency from merger to ringdown is given by the least-damped mo
     f_2 \approx 0.747 \frac{c}{2\pi R_S} \approx 12 \rm{kHz} \left( \frac{M_\odot}{M}\right)
 \end{equation}
 
+For the ringdown, we have a Lorentzian function $\mathcal{L}$ centred around the merger to ringdown transition frequency $f_2$ with the width $\sigma$.
+
+The global normalisation factor $C$ has the following form in SI units.
+
+\begin{equation}
+    C_e = \sqrt{\frac{5}{24}}\frac{(GM_c)^{5/6}}{\pi^{2/3}c^{3/2}}\frac{(1+z)^2}{d_L}
+\end{equation}
+
+This depends on the chirp mass which characterises a waveform instead of the total mass and the luminosity distance.
+
+\begin{equation}
+    M_c = \frac{(m_1m_2)^{3/5}}{(m_1+m_2)^{1/5}}
+\end{equation}
+
+\begin{equation}
+    d_L = a_0 (1+z)\int_0^z d\tilde{z}\frac{c}{a_0 H(\tilde{z})}
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Images/dE_df_of_f.png}
+    \caption{The energy spectrum as a function of frequency for a BBH merger where both BH have a mass of 20$M_\odot\ $ at $z=0$. }
+    \label{dE_df_f}
+\end{figure} 
+
+
 Later, we will consider the square strain as a function of frequency $|h(f)|^2$ for the energy spectrum, so we can ignore the phase $\psi(f)$.
 
 \begin{equation}
     h(f)=A(f)e^{-i\psi(f)}
 \end{equation}
+
 
 Here the redshift dependence will come in through the derivation by the emission 
 frequency, see e.g. \ref{window}. From this waveform template, we can get the energy 
@@ -86,13 +120,6 @@ spectrum in the following way.
 \begin{equation}
     \frac{dE_{GW,e}}{df_e d\Omega_e} = \frac{\pi d_L^2 c^3f_o^2}{2G(1+z)^2} | h(f_o)| ^2 \propto f_o^2h^2(f_o) \propto h^2(t)
 \end{equation}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{Images/dE_df_of_f.png}
-    \caption{The energy spectrum as a function of frequency for a BBH merger where both BH have a mass of 20$M_\odot\ $. }
-    \label{dE_df_f}
-\end{figure} 
 
 
 \begin{figure}
@@ -114,13 +141,15 @@ spectrum in the following way.
     \label{dE_df_diff_frequencies}
 \end{figure}
 
-If we plot the energy spectrum as a function of z for different frequencies, see Fig. \ref{dE_df_diff_frequencies}, we can see different sections of Fig. \ref{dE_df_f}. This is because $d^2 E_{GW,e}/df_e d\Omega_e$ only depends on z through the emitted frequency. The energy spectrum is written as a function of $f_e$, but we implement it in such a way that the user can choose the received frequency at the detector.
+If we plot the energy spectrum as a function of $z$ for different frequencies, see Fig. \ref{dE_df_diff_frequencies}, we can see different sections of Fig. \ref{dE_df_f}. This is because $d^2 E_{GW,e}/df_e d\Omega_e$ only depends on z through the emitted frequency. The energy spectrum is written as a function of $f_e$, but we implement it in such a way that the user can choose the received frequency at the detector.
 
 \begin{equation}
     f_e = (1+z)f_0
 \end{equation}
 
-At lower frequencies, like 1 Hertz, the the energy spectrum consists of the inspiral phase. At 10 Hertz, we can see the transition from the inspiral to the merger phase. The transition to the ringdown is visible at 100 Hertz. At high frequencies such as 1000 Hertz, the ringdown phase dominates at all redshifts.
+At lower frequencies, like 1 Hertz, the energy spectrum consists of the inspiral phase. At 10 Hertz, we can see the transition from the inspiral to the merger phase. The transitions are not always smooth since the parameters $\omega_i$ fix the continuity of the curve but not the slope. The transition to the ringdown is visible at 100 Hertz. At high frequencies such as 1000 Hertz, the ringdown phase dominates at all redshifts.
+
+To speed up the calculation, we assume $m_1 = m_2 = 20M_\odot$. This is a common BH mass considering GW observations from LVK \cite{the_ligo_scientific_collaboration_population_2022}.
 
 \section{Star Formation Rate}
 

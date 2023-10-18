@@ -1,10 +1,10 @@
 \section{Fundamentals}
 \label{gw_fundamentals}
-GW are oscillations in spacetime, similar to electromagnetic
-waves. We can start with the Einstein equation:
+GW are oscillations in spacetime, similar to electromagnetic waves. To treat them analytically, this section follows \cite{van_holten_gravitational_2019} which considers only the inspiral phase of a compact binary merger. These mergers will be described below in section \ref{BBH_mergers}. To summarise shortly, the inspiral phase is the phase in which two heavy objects orbit around each other in a spiral form. They lose potential energy and convert it into GW, which we will see at the end of this calculation. 
+We can start with the Einstein equation which relates the matter distribution to the spacetime curvature.
 
 \begin{equation}
-    G_{\mu\nu}= \frac{8\pi G}{c^4} T_{\mu\nu}.
+    G_{\mu\nu}= \frac{8\pi G}{c^4} T_{\mu\nu}
 \end{equation}
 
 Since GW (mostly) propagate in the vacuum and we assume a small amplitude $|\delta g_{\mu\nu}| \ll 1$, we arrive at the following differential equation.
@@ -28,14 +28,12 @@ We assume that the metric only has small linear perturbations.
     \kappa = \frac{\sqrt{8\pi G}}{c^2} \approx 2.1 \cdot 10^{-41}\frac{\rm{s}^2}{\rm{kg}\,\rm{ m}}
 \end{equation}
 \begin{equation}
-    |h_{\mu \nu}| << 1
+    |h_{\mu \nu}| \ll 1
 \end{equation}
-Here $\eta_{ \mu \nu}$ the Minkowski metric for flat spacetime.
-
-We can solve the differential equation with the trace reverse tensor.
+Here $\eta_{ \mu \nu}$ denotes the Minkowski metric for flat spacetime and $h_{\mu\nu}$ describes the perturbations from this background metric. The constant $\kappa$ is defined in this way to give $h_{\mu\nu}$ the standard dimensions of a bosonic tensor field, i.e. spin 1.  We can solve the differential equation with the trace reverse tensor.
 
 \begin{equation}
-    \bar{h}_{\mu\nu} = h_{\mu\nu}-\frac{1}{2} \eta_{\mu\nu}h
+    \underline{h}_{\mu\nu} = h_{\mu\nu}-\frac{1}{2} \eta_{\mu\nu}h
     \label{trace_reverse}
 \end{equation}
 
@@ -43,12 +41,12 @@ Here, $h$ is the trace of $h_{\mu\nu}$.
 
 \subsection{Wave Equation}
 
-If we want to describe the transport of energy and momentum by GW analytically, we can assume an asymptotically flat environment since the detector is at a far distance from the source. Then, we will consider Newtonian binaries in a circular orbit and only look at the non-relativistic regime. This will limit us to the inspiral phase, see Fig. \ref{GW_waveform} since the non-relativistic approximation only applies in that phase. Later though, we will see that for the implementation in the {\tt CLASS} code all the phases need to be modelled.
+If we want to describe the transport of energy and momentum by GW analytically, we can assume an asymptotically flat environment since the detector is at a far distance from the source. Then, we will consider Newtonian binaries in a circular orbit and only look at the non-relativistic regime. This will limit us to the inspiral phase, as mentioned above, since the non-relativistic approximation only applies in that phase. Later though, we will see that for the implementation in the {\tt CLASS} code all the phases need to be modelled.
 
 The linear perturbation $h_{\mu\nu}$ is a dimensionless bosonic tensor field and thus follows the massless field equation (\cite{van_holten_gravitational_2019}):
 
 \begin{equation}
-    \square h_{\mu\nu} -\partial_mu \partial^\lambda h_{\lambda\nu}-\partial_\nu\partial^\lambda h_{\lambda\mu}+\partial_\mu \partial_\nu h - \eta_{\mu\nu}(\square h-\partial^\kappa \partial^\lambda h_{\kappa\lambda})=-\kappa T_{\mu\nu}
+    \square h_{\mu\nu} -\partial_{mu} \partial^\lambda h_{\lambda\nu}-\partial_\nu\partial^\lambda h_{\lambda\mu}+\partial_\mu \partial_\nu h - \eta_{\mu\nu}(\square h-\partial^\kappa \partial^\lambda h_{\kappa\lambda})=-\kappa T_{\mu\nu}
 \end{equation}
 
 For the gauge transformation, we can impose the de Donder gauge condition:
@@ -127,17 +125,17 @@ For a wave propagating in z-direction, we will then get the following amplitude 
     \end{pmatrix}
 \end{equation}
 
-To illustrate plus and cross polarisations, Fig. \ref{polarisation} shows both over one period.
+We call $e_+$ and $e_\times$ the plus and cross polarisations. To illustrate them, Fig. \ref{polarisation} shows both over one period.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{Images/polarisations.png}
-    \caption[Illustration of the plus and cross polarisations varying with time.]{Illustration of the plus and cross polarisations varying with time. The figure is taken from a lecture by Prof. Jan van Holten.}
+    \caption[Illustration of the plus and cross polarisations varying with time.]{Illustration of the plus and cross polarisations varying with time. The figure is taken from an unpublished lecture by Prof. Jan van Holten., the author of \cite{van_holten_gravitational_2019}.}
     \label{polarisation}
 \end{figure} 
 
 
-Then, a plane wave in z-direction with plus polarisation would have the following expression, since the cross polarisation will be zero.
+Then, a plane wave in z-direction with only plus polarisation would have the following expression, since the cross polarisation will be zero.
 \begin{equation}
     h(z, t) = h_+ 
     \begin{pmatrix}
@@ -149,14 +147,14 @@ Then, a plane wave in z-direction with plus polarisation would have the followin
     e^{i(k z-\omega t)}
 \end{equation}
 
-For a length of $L_0$ along the x-axis, it would oscillate in size in the
+A length of $L_0$ along the x-axis through which this GW passes, would then oscillate in size in the
 following way:
 \begin{equation}
     L(t) = L_0 + \frac{h_+ L_0}{2} cos(\omega t).
 \end{equation}
 
 \subsection{Quadrupole Wave Emission}
-If we have a source in a finite region of space, we can use the retardated Green's function to solve the wave equation. This is because the waves are causally related to the source $t> |\vec{x}'-\vec{x}|$.
+We will now work in natural units, i.e. $c=1$. If we have a source in a finite region of space, we can use the retardated Green's function to solve the wave equation. This is because the waves are causally related to the source $t> |\vec{x}'-\vec{x}|$.
 
 \begin{equation}
     \square \underline{h}_{\mu\nu}=-\kappa T_{\mu\nu}
@@ -166,7 +164,11 @@ If we have a source in a finite region of space, we can use the retardated Green
     \Rightarrow \underline{h}_{\mu\nu}(\vec{x}, t) = \frac{\kappa}{4\pi} \int d^3 x' \frac{T_{\mu\nu}(\vec{x}', t-|\vec{x}'-\vec{x}|)}{|\vec{x}'-\vec{x}|}
 \end{equation}
 
-Then, we can assume that we are in the far field regime, such that $|\vec{x}| \gg |\vec{x}'|$.
+Then, we can assume that we are in the far field regime, such that the observer $|\vec{x}|$ is far away from the source $|\vec{x}'|$.
+
+\begin{equation}
+    |\vec{x}| \gg |\vec{x}'|
+\end{equation}
 
 \begin{equation}
     r:= |\vec{x}| \approx |\vec{x}'-\vec{x}|
@@ -187,7 +189,7 @@ Additionally to the de Donder gauge (\ref{de_donder}), we will now impose the tr
     h_{ii} = 0
 \end{equation}
 
-This gives us the following solution which is valid at a large distance in empty space.
+This gives us the following solution which is valid at a large distance in empty space. We use the unit vector of the distance between source and observer $\hat{r}=\vec{r}/|\vec{r}|$.
 
 \begin{equation}
     \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{4\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\left(I_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{I} \; \vec{r}\right)
@@ -222,12 +224,12 @@ As mentioned earlier, we can perform a non-relativistic approximation for the in
     Q_{ij}(t-r)=\frac{1}{2} \int d^3x' \left(x_i' x_j' -\frac{1}{3}\delta_{ij}\vec{x}'^2 \right)\rho(\vec{x}', t-r)
 \end{equation}
 
-GW cannot form from a dipole mass distribution since that would require negative masses. However, if we have a quadrupole distribution with vacuum and masses (like a binary black hole for example), GW can be created.
+If we consider which mass constellation can physically form GW, we could first imagine a dipole similar to a source for electromagnetic waves. However, a dipole would require a negative mass. The next possible multipole is then a quadrupole distribution, which is possible if we have two vacuum regions and two mass regions, like a binary black hole for example. Here, each BH is a massive region and the space between them is a vacuum region. For this reason, the GW strain depends principally on the quadrupole moment and does not have a dipole contribution.
 
 The wave field for non-relativistic sources is thus:
 
 \begin{equation}
-    \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{8\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\frac{\partial^2}{\partial t^2}\left(Q_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\; \underline{Q} \; \vec{r}\right)
+    \underline{h}_{ij}(\vec{x}, t)=\frac{\kappa}{8\pi}(\delta_{ik}-\hat{r_i}\hat{r_k})(\delta_{jl}-\hat{r_j}\hat{r_l})\frac{\partial^2}{\partial t^2}\left(Q_{kl}+\frac{1}{2}\delta_{kl}\vec{r}\cdot Q \cdot \vec{r}\right)
 \end{equation}
 
 To get the Hamiltonian density, we introduce the conjugate momentum field $\pi_{ij}$.
@@ -237,7 +239,7 @@ To get the Hamiltonian density, we introduce the conjugate momentum field $\pi_{
 N_k-\partial_i N_j-\partial_j N_i 
 \end{equation}
 
-This contains the auxiliary fields $N=-h_{00}$ and $N_i=h_{0i}$.
+This contains the auxiliary fields $N_0=-h_{00}$ and $N_i=h_{0i}$.
 Then, we can calculate the Hamiltonian in the standard way.
 \begin{equation}
     \mathcal{H}=\partial_t \underline{h}^{\mu\nu}-\mathcal{L}[h]
@@ -246,19 +248,19 @@ Then, we can calculate the Hamiltonian in the standard way.
     =\frac{1}{2}(\nabla h_{\mu\nu})^2-\kappa \underline{h}^{\mu\nu}T_{\mu\nu}
 \end{equation}
 
-The energy in a certain volume changes with time depending on the divergence of the momentum flux integrated over the same volume.
+The energy in a certain volume changes with time depending on the divergence of the momentum flux $\Pi$ integrated over the same volume.
 
 \begin{equation}
     \frac{dE_V}{dt}=-\int_V d^3x \nabla\cdot \Pi
 \end{equation}
 
-The momentum flux depends on the time and space derivatives of the GW strain.
+The momentum flux depends on the time and space derivatives of $h_{\mu\nu}$.
 
 \begin{equation}
     \Pi=-\nabla \underline{h}^{\mu\nu}\partial_t \underline{h}_{\mu\nu}
 \end{equation}
 
-If we consider a plane wave in z-direction, we have the following strain, where $a,b =(1, 2)$ and $h_{0i}=h_{3i}=0$.
+If we consider a plane wave in z-direction, we have the following strain, where $a,b \in [1, 2]$ and $h_{0i}=h_{3i}=0$.
 
 \begin{equation}
     h_{ab} =e_{ab}\cos(\omega(t-z/c))
@@ -272,7 +274,7 @@ If we consider a plane wave in z-direction, we have the following strain, where 
     \end{pmatrix}
 \end{equation}
 
-Then, we arrive at the energy flux time per area at the z-coordinate 0.
+Then, we arrive at the time derivative of the energy flux per area at the z-coordinate 0.
 
 \begin{equation}
     \frac{dE}{dAdt}\left.\right|_{z=0} = (\hat{n}\cdot \Pi)\left.\right|_{z=0}
@@ -293,22 +295,42 @@ We can average this energy loss through GW over time. This is useful since we wi
 \end{equation}
 
 \begin{equation}
-    \Rightarrow \bar{\frac{dE}{dAdt}}=\frac{\pi c^3f^2}{8G}(a_+^2+a_\times^2)
+    \Rightarrow \left\langle\frac{dE}{dAdt}\right\rangle=\frac{\pi c^3f^2}{8G}(a_+^2+a_\times^2)
 \end{equation}
 
 We will use a similar form of the GW energy but derived by the frequency later for computing the anisotropies.
 
-In the following, we will not use the more standard definition of $h_{ij}$ without the $\kappa$ factor.
+In the following, we will use the more standard definition of $h_{\mu\nu}$ without the $\kappa$ factor.
 
 \begin{equation}
     h_{\mu\nu} = g_{\mu\nu}-\eta_{\mu\nu}
 \end{equation}
 
+Furthermore, without deriving this result, it is interesting to show the time dependence of the GW frequency. This depends on the chirp mass which is a combination of the two compact object masses and defines the waveform.
+
+\begin{equation}
+    f(t)=\frac{c}{16\pi}\left(\frac{GM_c}{c^2}\right)^{-5/8}\left(\frac{5}{c(t_0-t)}\right)^{3/8}
+\end{equation}
+
+
+\begin{equation}
+    M_c=\frac{(m_1 m_2)^{3/5}}{(m_1+m_2)^{1/5}}
+\end{equation}
+
+Here, $t_0$ is the end of the inspiral phase. A waveform of the inspiral phase is shown in Fig.\ref{inspiral_van_holten}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Images/waveform_van_holten.PNG}
+    \caption{The GW inspiral phase as described in this section. This figure is taken from an unpublished lecture of Prof. Jan van Holten, the author of \cite{van_holten_gravitational_2019}.}
+    \label{inspiral_van_holten}
+\end{figure} 
+
 \section{Stochastic Background}
 The stochastic GW background consists of all sources that are too faint to be resolved individually, thus it is a superposition of many independent sources. The same source can contribute to multiple frequencies over time. 
-The biggest background comes from astrophysical sources, like compact object mergers, but there is also a smaller cosmological background present. That one originates from early universe phenomena. 
+The biggest background comes from astrophysical sources, like compact object mergers, but there is also a smaller cosmological background present. The latter originates from early universe phenomena. 
 To measure the background we need the correlation between two detector
-outputs \cite{christensen_stochastic_2019}. If the noise between them is uncorrelated, it will average out over time and leave the background signal.
+outputs (\cite{christensen_stochastic_2019}). If the noise between them is uncorrelated, it will average out over time and leave the background signal.
 \begin{equation}
     \langle s_1 (t) s_2(t)\rangle \, = \, \langle(n_1(t) + h(t))(n_2(t) + h(t))\rangle
 \end{equation}
@@ -331,9 +353,9 @@ density.
     \rho_{GW} = \int_0^\infty df \, S_h(f) \frac{\pi c^2 f^2}{8G}
 \end{equation} 
 
-The frequency-dependent monopole depends on this energy density. Here, we consider the observed frequency $f_o$.
+The frequency-dependent monopole of the background $\Omega_{GW}$ depends on this energy density. Here, we consider the observed frequency $f_o$.
 \begin{equation}
-    \bar{\Omega}_{AGWB}(f_o)=\frac{d\rho_{GW}}{df}
+    \bar{\Omega}_{GW}(f_o)=\frac{d\rho_{GW}}{df_o}
 \end{equation}
 
 The energy density parameter is the frequency-dependent monopole integrated over the logarithmic frequency.
@@ -345,23 +367,23 @@ The energy density parameter is the frequency-dependent monopole integrated over
     \approx \int d\ln f \; \bar{\Omega}_{AGWB}(f_o)
 \end{equation}
 
-\subsection{Astrophysical}
+\subsection{Astrophysical Component}
 \label{astro_GWB}
 GW can be created by different sources. Considering astrophysical sources, they can come from
 merging binaries, bursts (e.g. from core-collapse supernovae) or continuous waves 
 (e.g. from pulsars). 
 The AGWB consists mostly of compact object mergers, which are mainly black holes and neutron stars. 
 
-The current GW detectors like LIGO, Virgo and KAGRA (LVK) have not detected a GW background yet, but they have set upper limits from their third observing run. Assuming a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes \cite{phinney_practical_2001}, they arrive at the following integrated energy density.
+The current GW detectors like LIGO, Virgo and KAGRA (LVK) have not detected a GW background yet, but they have set upper limits from their third observing run \cite{abbott_upper_2021}. Assuming a GW energy density parameter proportional to $f^{-2/3}$, which is the case in the inspiral phase of binary black holes (\cite{phinney_practical_2001}), they arrive at the following integrated energy density.
 \begin{equation}
-    \Omega_{2/3, LIGO} = (3.4 \pm 6.1) \cdot 10^{-9}
+    \Omega_{2/3, LIGO} \leq (3.4 \pm 6.1) \cdot 10^{-9}
 \end{equation}
 
 This is compatible with zero, but an anisotropic background would indicate
 a more interesting cosmology, which is why it would be important to disentangle
-any anisotropic that could be observed.
+any anisotropies that could be observed.
 
-The AGWB was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as accurate clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a GW background. 
+The AGWB was detected for the first time this year (2023) using the pulsar time array NANOGrav \cite{agazie_nanograv_2023}. Pulsar time arrays use the fact that pulsars are very accurate clocks. They are rotating neutron stars that have a strong magnetic field and thus emit radio waves in very regular intervals. Since they are so stable, we can use these signals as clocks. If there are any changes in the time of arrival of multiple pulsars, this could indicate a GW background. 
 The NANOGrav experiment used a frequency range of $10^{-8.75} - 10^{-7.5}$ Hz. 
 Also assuming a frequency power law of $f^{-2/3}$, they find the following integrated energy density.
 
@@ -374,7 +396,7 @@ This is higher than the upper limit from LVK, but we have to keep in mind that t
 \subsubsection{Binary Black Hole Mergers}
 \label{BBH_mergers}
 
-A compact binary coalescence will produce a chirp-like GW signal, like in \ref{GW_waveform}. Both massive objects attract each other and decrease their orbit around each other in the inspiral phase. The potential energy is converted into a GW. After the inspiral phase, the merger and ringdown phases follow, where the new BH becomes axisymmetric and stops emitting GW. The frequency increases over time during all three phases.
+A compact binary coalescence will produce a chirp-like GW signal, like in Fig. \ref{GW_waveform}. Both massive objects attract each other and decrease their orbit around each other in the inspiral phase. The potential energy is converted into a GW. After the inspiral phase, the merger and ringdown phases follow, where the new BH becomes axisymmetric and stops emitting GW. The frequency increases over time during all three phases.
 
 The inspiral phase is the simplest to describe analytically, see \ref{gw_fundamentals}. However, in this work, we consider all three phases of the GW. We will see later that this is necessary to derive a frequency dependence.
 
@@ -386,11 +408,11 @@ If we consider the energy density parameter of the stochastic GW background, we 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{Images/Capurri_GW_Background_monopole_sources.png}
-    \caption[The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.]{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from Ref. \cite{capurri_intensity_2021}.} 
+    \caption[The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.]{The GW energy density parameter as a function of frequency from 1 to 10,000 Hz. This shows the different contributions from BH-BH, NS-NS and BH-NS events. All curves are normalised to the local advanced LIGO/Virgo merger rate. The Figure is taken from \cite{capurri_intensity_2021}.} 
     \label{BG_sources}
 \end{figure} 
 
-In this figure, all three curves are normalised to the local merger rate from the advanced LIGO/Virgo detectors. Without this normalisation binary BH mergers dominate at most frequencies at which they are present. We can see that for the frequency range of $1-1000 Hz$, it is reasonable to only consider BBH in our analysis since they are the most present source. However, the applied formalism for the frequency dependence can be generalised to a system of a BH and a neutron star or a system of two neutron stars.
+In this figure, all three curves are normalised to the local merger rate from the advanced LIGO/Virgo detectors. Without this normalisation binary BH mergers dominate at most frequencies at which they are present. We can see that for the frequency range of $1-1000$ Hertz, it is reasonable to only consider BBH in our analysis since they are the most present source. However, the applied formalism for the frequency dependence can be generalised to a system of a BH and a neutron star or a system of two neutron stars.
 
 \begin{figure}[h]
     \centering
@@ -399,14 +421,16 @@ In this figure, all three curves are normalised to the local merger rate from th
     \label{GW_waveform}
 \end{figure} 
 
-\subsection{Cosmological}
+\subsection{Cosmological Component}
 \label{cosmo_bg}
 The major contributions to the cosmological GW background are primordial
-black holes and GW from phase transitions and inflation.
-Schulze et al. \cite{schulze_gw_class_2023} computed the angular power spectrum of this background using a modified version of CLASS \cite{blas_cosmic_2011} called {\tt GW\_CLASS}.
-Bubbles of a phase can form in a universe which is in an older phase. In there, magnetohydrodynamic (MHD) turbulence can also produce GW.
-TODO: PBH shortly
-Using this code, one can choose a source of this background and compute the associated angular power spectrum. Here, we use the signal from the expected inflationary GW background with a blue tilt. So, we will have a stronger background at higher frequencies compared to lower frequencies. 
+black holes and GW from phase transitions and inflation. \cite{schulze_gw_class_2023} computed the angular power spectrum of this background using a modified version of CLASS (\cite{blas_cosmic_2011}) called {\tt GW\_CLASS}.
+GW from phase transitions arise when bubbles of a phase form in a universe which is still in an older phase. An everyday example of a first-order phase transition is boiling water. The entropy and the volume change discontinuously when going from one phase to another. In the early universe, first-order phase transitions could produce a cosmological GW background (\cite{christensen_stochastic_2019}). 
+
+Primordial BH could have formed in the early universe during radiation domination. Since they are not produced from star formation, they can span a larger mass range than stellar BH. 
+
+
+In the {\tt GW\_CLASS} code, one can choose a source of this background, i.e. primordial BH, phase transitions or inflation, and compute the associated angular power spectrum. Here, we use the signal from the expected inflationary GW background with a blue tilt. So, we will have a stronger background at higher frequencies compared to lower frequencies. 
 
 \subsubsection{Inflation}
 
@@ -431,13 +455,13 @@ We also know how $\Omega_k$ scales with the scale factor.
     \Omega_k = - \frac{k}{(aH)^2}= -\frac{k}{\dot{a}^2}
 \end{equation}
 
-In the case of an inflationary GW background, the tensor power spectrum $<s(k)$ creates the GW. This is linearly related to the average GW energy density parameter (or monopole) \cite{schulze_gw_class_2023}.
+In the case of an inflationary GW background, the tensor power spectrum $P_T(k)$ creates the GW. This is linearly related to the average GW energy density parameter or monopole (\cite{schulze_gw_class_2023}).
 
 \begin{equation}
     \bar{\Omega}_{GW} = \frac{1}{12 H_0^2 a_0^2} \frac{\eta_{eq}^2}{2\eta_0^4} P_T(k)
 \end{equation}
 
-The GW created through large-scale perturbations during inflation are relevant for wavenumbers $k=10^{-5} Mpc^{-1} -1 Mpc^{-1}$, which corresponds to millihertz up to the Hertz range, going through both the sensitivity range of ground-based detectors, like ET \cite{alonso_noise_2020}, and space-based detectors like LISA \cite{robson_construction_2019}.
+The GW created through large-scale perturbations during inflation are relevant for wavenumbers $k=10^{-5} Mpc^{-1} -1 Mpc^{-1}$, which corresponds to millihertz up to the Hertz range, going through both the sensitivity range of ground-based detectors, like the upcoming Einstein Telescope (ET) \cite{alonso_noise_2020}, and future space-based detectors like the Laser Interferometer Space Antenna or LISA \cite{robson_construction_2019}.
 
 
 \subsection{Number Density Distribution}
@@ -466,27 +490,26 @@ The authors choose the common SNR threshold $\langle \rho^2 \rangle =8$.
     \langle \rho^2 \rangle = \frac{1}{5}\int_{f_{min}}^{f_{max}} df \frac{h_c^2(f)}{f^2 S_n(f)}
 \end{equation}
 
-For the Einstein Telescope (ET), they find that $F_{GW}^{detectable} \approx 1$ even for redshifts above 5, which have a small effect on the detection overall.
+For ET, they find that $F_{GW}^{detectable} \approx 1$ even for redshifts above 5, which have a small effect on the detection overall.
 
 \subsection{Projection Effects}
 \label{projection_effects}
 
 While GW travel towards us, they can be distorted by various effects. Mathematically, this comes through the integration along the line of sight.
-For the intrinsic anisotropies, there are four different contributions to the source functions $\Delta_l^{AGWB}$. The different pertinent effects are density fluctuations, redshift space distortions, the Doppler effect and relativistic corrections or gravitational potential terms. \cite{di_dio_classgal_2013}.
+For the intrinsic anisotropies, there are four different contributions to the source functions $\Delta_l^{AGWB}$. The different pertinent effects are density fluctuations, redshift space distortions, the Doppler effect and relativistic corrections or gravitational potential terms (\cite{di_dio_classgal_2013}).
 
-We write each random field as a product of the primordial curvature perturbation and a transfer function. In \cite{dallarmi_dipole_2022}, they compute the different source terms using the {\tt CLASSgal} framework. The implementation in {\tt CLASS} follows the same framework, since {\tt CLASSgal} has been merged into the standard public code.
 
 \begin{equation}
     X(\eta, \vec{k}) = T_X(\eta, \vec{k})\zeta(\vec{k})
 \end{equation}
 
-The two-point correlation function of the curvature perturbation has the following form.
+We write each random field as a product of the primordial curvature perturbation and a transfer function. \cite{dallarmi_dipole_2022} compute the different source terms using the {\tt CLASSgal} framework. The implementation in {\tt CLASS} follows the same framework, since {\tt CLASSgal} has been merged into the standard public code. The two-point correlation function of the curvature perturbation has the following form.
 
 \begin{equation}
-    \langle \zeta(\vec{k})\zeta*(\vec{k}')\rangle = (2\pi)^3 \delta(\vec{k}-\vec{k}')\frac{2\pi^2}{k^3}P(k)
+    \langle \zeta(\vec{k})\zeta^*(\vec{k}')\rangle = (2\pi)^3 \delta(\vec{k}-\vec{k}')\frac{2\pi^2}{k^3}P(k)
 \end{equation}
 
-There is one density source term, dependent on the transfer functions of matter density fluctuations $T_{\delta m}$ and of the velocity divergence of matter $T_{\theta m}$. Here, $\bar{\chi}$ is a shifted conformal time variable.
+Within the projection effects, there is one density source term, dependent on the transfer functions of matter density fluctuations $T_{\delta m}$ and of the velocity divergence of matter $T_{\theta m}$. Here, $\bar{\chi}$ is a shifted conformal time variable.
 
 \begin{equation}
     \bar{\chi} = \eta_0 - \eta 

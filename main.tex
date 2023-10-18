@@ -39,6 +39,7 @@
 \usepackage{color, colortbl}
 \usepackage[T1]{fontenc}
 \usepackage{xr}
+%\usepackage{parskip}
 
 %\renewcommand{\chapterheadstartvskip}{\vspace{1cm}}
 \let\chaptername\relax
@@ -142,9 +143,6 @@
 \label{conclusion_chapter}
 \subfile{conclusion.tex}
 
-\appendix
-%\addcontentsline{toc}{chapter}{Appendix}
-\subfile{appendices.tex}
 
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
@@ -158,4 +156,7 @@
 \printbibliography
 
 
+\appendix
+%\addcontentsline{toc}{chapter}{Appendix}
+\subfile{appendices.tex}
 \end{document}

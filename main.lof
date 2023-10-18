@@ -6,94 +6,96 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the plus and cross polarisations varying with time.}}{9}{figure.caption.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.}}{14}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The GW inspiral phase as described in this section. This figure is taken from an unpublished lecture of Prof. Jan van Holten, the author of \cite {van_holten_gravitational_2019}.\relax }}{13}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The different stages of a BBH merger with the corresponding waveform.}}{15}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The GW energy density parameter as a function of frequency from 1 to 10,000 Hz.}}{15}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The three phases of a binary coalescence: inspiral, merger and ringdown.\relax }}{20}{figure.caption.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger where both BH have a mass of 20$M_\odot \ $. \relax }}{21}{figure.caption.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum $d^2 E_{GW,e}/df_e d\Omega _e$ at different observed freqeuncies as a function of redshift.\relax }}{22}{figure.caption.11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 Hz}}}{22}{subfigure.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {10 Hz}}}{22}{subfigure.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {100 Hz}}}{22}{subfigure.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {1000 Hz}}}{22}{subfigure.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The SFR for star-forming galaxies for different redshifts.}}{24}{figure.caption.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The dimensionless HMF for different redshifts $z$ at $\Delta =800$.\relax }}{26}{figure.caption.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces The HMF at $z=0$.\relax }}{27}{figure.caption.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{The dimensionless HMF for different overdensity parameters $\Delta $ at $z=0$.} }}}{27}{subfigure.6.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The HMF in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ with $\Delta =800$, here at $z=0$. }}}{27}{subfigure.6.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The BBH merger rate as a function of the redshift z.\relax }}{28}{figure.caption.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces GW angular power spectrum for different window functions.\relax }}{29}{figure.caption.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces GW angular power spectrum for different redshifts.\relax }}{29}{figure.caption.17}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces The final window function at 1 Hertz for this code for comparison with \cite {dallarmi_dipole_2022}.}}{30}{figure.caption.18}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces The window functions at different observed frequencies.\relax }}{31}{figure.caption.19}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces The influence of the evolution bias on the angular power spectrum at an observed frequency of 1000 Hertz.\relax }}{33}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The different stages of a BBH merger with the corresponding waveform.}}{16}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Noise sensitivity with respect to frequency for LVK.}}{34}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The three phases of a binary coalescence: inspiral, merger and ringdown.\relax }}{21}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The energy spectrum as a function of frequency for a BBH merger where both BH have a mass of 20$M_\odot \ $ at $z=0$. \relax }}{22}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.}}{35}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The energy spectrum $d^2 E_{GW,e}/df_e d\Omega _e$ at different observed freqeuncies as a function of redshift.\relax }}{23}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The noise angular power spectrum for different detectors at a reference frequency of 63 Hertz.}}{36}{figure.caption.24}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 Hz}}}{23}{subfigure.3.1}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {10 Hz}}}{23}{subfigure.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of using the {\tt NIFTy} code to reconstruct an input power spectrum.\relax }}{39}{figure.caption.25}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {100 Hz}}}{23}{subfigure.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The power spectra of the one-dimensional toy model.}}{39}{figure.caption.26}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {1000 Hz}}}{23}{subfigure.3.4}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The SFR for star-forming galaxies for different redshifts.}}{25}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces AGWB angular power spectrum of different observed frequencies, going up to $l=30$.\relax }}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The dimensionless HMF for different redshifts $z$ at $\Delta =800$.\relax }}{28}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The dipole of the AGWB at different observed frequencies.\relax }}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The HMF at $z=0$.\relax }}{28}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the computed dipole contribution to \cite {dallarmi_dipole_2022}.}}{42}{figure.caption.29}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{The dimensionless HMF for different overdensity parameters $\Delta $ at $z=0$.} }}}{28}{subfigure.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{This work} }}}{42}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The HMF in units of $\frac {h/M_\odot }{(Mpc/h)^3}$ or respectively $\frac {h^4}{M\odot Mpc^3}$ with $\Delta =800$, here at $z=0$. }}}{28}{subfigure.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{\cite {dallarmi_dipole_2022}} }}}{42}{subfigure.3.2}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The BBH merger rate as a function of the redshift z.\relax }}{30}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Reconstruction of the AGWB at 100 Hertz on a sky map using the {\tt NIFTy} code.}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces GW angular power spectrum for different window functions.\relax }}{31}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The power spectra of the AGWB separation at 100 Hertz.}}{44}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces GW angular power spectrum for different redshifts.\relax }}{31}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of the AGWB at 400 Hertz on a sky map using the {\tt NIFTy} code.}}{45}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The final window function at 1 Hertz for this code for comparison with \cite {dallarmi_dipole_2022}.}}{32}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The power spectra of the AGWB separation at 400 Hertz.}}{46}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces The window functions at different observed frequencies.\relax }}{33}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Frequency dependence of the monopole of the cosmological GW background for different generation mechanisms.}}{47}{figure.caption.34}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.9}{\ignorespaces A comparison of the angular power spectra of the astrophysical versus the inflationary cosmological GW background at 900 Hertz.\relax }}{47}{figure.caption.35}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Reconstruction of the CGWB at 900 Hertz on a sky map using the {\tt NIFTy} code.}}{48}{figure.caption.36}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The power spectra of the CGWB separation at 900 Hertz.}}{49}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces The influence of the evolution bias on the angular power spectrum at an observed frequency of 1000 Hertz.\relax }}{35}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Noise sensitivity with respect to frequency for LVK.}}{36}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The noise angular power spectrum for LVK.\relax }}{37}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The design sensitivity curve for ET and CE compared to LIGO A+.}}{37}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The noise angular power spectrum for different detectors at a reference frequency of 63 Hertz.}}{38}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{52}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of using the {\tt NIFTy} code to reconstruct an input power spectrum.\relax }}{41}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The power spectra of the one-dimensional toy model.}}{41}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AGWB angular power spectrum of different observed frequencies, going up to $l=30$.\relax }}{43}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The dipole of the AGWB at different observed frequencies.\relax }}{43}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the computed dipole contribution to \cite {dallarmi_dipole_2022}.}}{44}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {{This work} }}}{44}{subfigure.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {{\cite {dallarmi_dipole_2022}} }}}{44}{subfigure.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Reconstruction of the AGWB at 100 Hertz on a sky map using the {\tt NIFTy} code.}}{45}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The power spectra of the AGWB separation at 100 Hertz.}}{46}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of the AGWB at 400 Hertz on a sky map using the {\tt NIFTy} code.}}{47}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The power spectra of the AGWB separation at 400 Hertz.}}{48}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Frequency dependence of the monopole of the cosmological GW background for different generation mechanisms.}}{49}{figure.caption.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces A comparison of the angular power spectra of the astrophysical versus the inflationary cosmological GW background at 900 Hertz.\relax }}{49}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Reconstruction of the CGWB at 900 Hertz on a sky map using the {\tt NIFTy} code.}}{50}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The power spectra of the CGWB separation at 900 Hertz.}}{51}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces The dependency graph of transfer.c in the modified {\tt Multi\_CLASS} code starting from {\tt transfer\_sources} and {\tt transfer\_precompute\_selection.}\relax }}{59}{figure.caption.41}%
