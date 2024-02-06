@@ -1,7 +1,7 @@
 \documentclass[twoside, 12pt, openany]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,bindingoffset=0.3in,%
-            left=1in,right=1in,top=2cm,bottom=1cm,%
+            left=1in,right=1in,top=2cm,bottom=1.5cm,%
             footskip=2cm]{geometry}
 \usepackage[sorting=none, style=authoryear, backend=biber]{biblatex} 
 %\usepackage[backend=biber, style=numeric,]{biblatex}
@@ -52,11 +52,12 @@
             
 \DeclareUnicodeCharacter{2212}{-}
 
+\renewcommand{\floatpagefraction}{.8}%
 
 \begin{document}
 \setcounter{tocdepth}{3}
-%\frontmatter
-%\pagenumbering{roman}
+\frontmatter
+\pagenumbering{roman}
 
 \chapter*{Abstract}
 \subfile{abstract.tex}
@@ -74,8 +75,6 @@
             \\
             \textbf{CE} & Cosmic Explorer
             \\
-            \textbf{CGWB} & Cosmological Gravitational Wave Background
-            \\
             \textbf{CLASS} & Cosmic Linear Anisotropy Solving System 
             \\
             \textbf{ET} & Einstein Telescope
@@ -91,6 +90,8 @@
             \textbf{KAGRA} & Kamioka Gravitational Wave Detector
             \\
             \textbf{LIGO} & Laser Interferometer Gravitational-Wave Observatory
+            \\
+            \textbf{LVK} & LIGO, Virgo \& KAGRA
             \\
             \textbf{NANOGrav} & North American Nanohertz Observatory for Gravitational Waves
             \\
@@ -108,7 +109,8 @@
 \end{spacing}
 \newpage
 
-%\mainmatter
+\mainmatter
+\pagenumbering{arabic}
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \fancyhead[R]{}

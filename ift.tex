@@ -1,14 +1,7 @@
-Since the noise in GW detectors is very high, especially compared to the GW background, it makes sense to use powerful methods to separate the signal from the noise. One promising method is information field theory (IFT).
-Information field theory is a technique for signal reconstruction
-and field inference designed by Torsten Enßlin and his group at the 
-Max Planck Institute in Garching.  Its goal is to use a formalism from Bayesian statistics and quantum field theory to be able to reuse methods to infer fields from data. The problem
-at the base is that we want to infer a spatially continuously distributed field
-from a finite amount of data. To do that, we can add our knowledge about 
-physical laws, statistics, etc. of the problem, in the form of correlation functions.
+Since the noise in GW detectors is high compared to the GW background, it requires powerful methods to separate the signal from the noise. One promising method is IFT which is a technique for signal reconstruction and field inference designed by Torsten Enßlin and his group at the Max Planck Institute in Garching \cite{enslin_information_2013}. Its goal is to use a formalism from Bayesian statistics and quantum field theory to be able to reuse methods to infer fields from data. The problem at the base is that we want to infer a spatially continuously distributed field from a finite amount of data. To do that, we can add our knowledge about physical laws, statistics, etc. of the problem, in the form of correlation functions.
 
-We need to define our probability density functions over the space of all
-possibilities, which is why we will integrate using path integrals in 
-this formalism.
+
+\section{Information Hamiltonian}
 
 If we assume a linear measurement, our data consists of the signal modified by a response function and added noise. 
 
@@ -16,37 +9,32 @@ If we assume a linear measurement, our data consists of the signal modified by a
     d = R s + n
 \end{equation}
 
-It is reasonable to assume a linear response from our detector, see e.g. \cite{todo satyaprakash}. They derive an expression for the return time of the laser signal in the interferometer derived by time. This is proportional to the time derivative of the strain, here in plus polarisation. 
+\begin{equation}
+    (R s)_i = \int dx R_{ix} s_{x}
+\end{equation}
+
+The response corresponds to the point spread function of our instrument and
+other linear operations performed on the data. It is reasonable to assume a linear response from our detector, see e.g. \cite{sathyaprakash_physics_2009}. They derive an expression for the return time of the laser signal in the interferometer derived by time. The response function of the detector depends on the return time. This is proportional to the time derivative of the strain (in plus polarisation) which corresponds to our signal.
 
 \begin{equation}
     \frac{dt_{return}}{dt}=1+\sin^2(\theta)L \dot{h}_+(t)
 \end{equation}
 
-Here, $\theta$ is the angle between the beam direction and the detector plane.
-
-\begin{equation}
-    (R s)_i = \int dx R_{ix} s_{x}
-\end{equation}
-The response corresponds to the point spread function of our instrument and
-other linear operations performed on the data.
-
-With Gaussian noise, we get the following likelihood:
+Here, $\theta$ is the angle between the beam direction and the detector plane and $L$ is the arm length of the detector. With Gaussian noise, we get the following likelihood:
 \begin{equation}
     P(d|s) = \mathcal{N}(d-Rs, N) .
 \end{equation}
 
-\section{Information Hamiltonian}
-
-Using Bayes theorem, we define what is called an information Hamiltonian.
+This is a normal distribution centred around the noise $n=d-Rs$ with the noise covariance $N$ which needs to be modelled. Using Bayes theorem, we can now calculate a posterior $P(s|d)$. 
 \begin{equation}
     P(s|d) = \frac{P(d|s)P(s)}{P(d)}
 \end{equation}
-    
+The likelihood and the prior can be rewritten in terms of what is called an information Hamiltonian.
 \begin{equation}
     = \frac{e^{-\mathcal{H}(d, s)}}{Z_d}
 \end{equation}
 
-Here, $Z_d$ is the partition function, which is the evidence here.
+$Z_d$ is the partition function, which is the evidence in this case.
 \begin{equation}
     Z_d = P(d)
 \end{equation}
@@ -54,12 +42,16 @@ Here, $Z_d$ is the partition function, which is the evidence here.
         \mathcal{H}(d, s) = -ln(P(d|s)) - ln(P(s))
 \end{equation}
 
+This translates the Bayesian framework to a statistical field theory framework and allows us to use methods from (quantum) field theory to manipulate the data.
+
 \section{Wiener Filter}
 For a Gaussian prior and a Gaussian signal, we obtain the following
 Hamiltonian.
 \begin{equation}
     \mathcal{H}(d, s) = \frac{1}{2}(d-Rs)^{\dagger}N^{-1}(d-Rs)+\frac{1}{2}s^{\dagger}S^{-1}s
 \end{equation}
+
+We need to assume a detector response $R$, a noise covariance $N$ of the detector and a signal covariance $S$ coming from physical laws. Here the signal covariance comes from the calculated angular power spectrum and the noise covariance depends on which noise we assume. The noise will be based on detector sensitivities from Chapter \ref{comp_sep}.
 
 With quadratic completion, we can rewrite this in canonical form.
 \begin{equation}
@@ -79,17 +71,16 @@ The covariance can also be written with the signal and the mean:
 \begin{equation}
     D=\langle (s-m)(s-m)^\dagger \rangle_{s|d}
 \end{equation}
-Here, we assume the detector response $R$, the noise covariance $N$ of the detector and the signal covariance $S$ coming from physical laws, here coming from the calculated angular power spectrum.
 
 The posterior of the Wiener filter is a Gaussian distribution with mean $s-m$ and the earlier-mentioned covariance.
 \begin{equation}
     P(s|d)=\mathcal{N}(s-m, D)
 \end{equation}
 
+From this posterior, we can draw sample distributions and compare how well they match the realised signal, as we will see in the separation results section \ref{results_chapter}.
 
 \section{1D Toy Model}
-
-To show how {\tt NIFTy} works in principle, we will reconstruct a one-dimensional power spectrum. From this input, a random realisation of data points is drawn from which the signal is reconstructed. The reconstruction and the residual plot are shown in Fig. \ref{1D_reconstruction}.In this case, the reconstruction works quite well. 
+The methods of IFT are implemented in a {\tt python} package called {\tt NIFTy} for Numerical Information Field TheorY [\cite{selig_nifty_2013}].To show how the {\tt NIFTy} code works in principle, we will reconstruct a one-dimensional power spectrum. From this input, a random realisation of data points is drawn from which the signal is reconstructed. The reconstruction and the residual plot are shown in Fig. \ref{1D_reconstruction}.In this case, the reconstruction works quite well. 
 
 \begin{figure}[h]
     \centering
@@ -108,4 +99,6 @@ To show how {\tt NIFTy} works in principle, we will reconstruct a one-dimensiona
     \label{1D_power_spectrum}
 \end{figure} 
 
-In Fig.\ref{1D_power_spectrum}, we show different power spectra, i.e. the input, the one from the randomly drawn signal and the reconstruction. The reconstruction power spectrum is very similar to the signal one in this toy model.
+In Fig. \ref{1D_power_spectrum}, we show different power spectra, i.e. the input, the one from the randomly drawn signal and the reconstruction. The reconstruction power spectrum is very similar to the signal one in this toy model.
+
+We can see that the algorithm works well in this one-dimensional toy model. In the next chapter, we will apply it to a sky map of AGWB anisotropies.

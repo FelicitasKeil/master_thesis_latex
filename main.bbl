@@ -2230,6 +2230,87 @@
       \endverb
       \keyw{General Relativity and Quantum Cosmology,Astrophysics - High Energy Astrophysical Phenomena}
     \endentry
+    \entry{bellomo_beware_2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6b8a3dd1510f261468c9559595041f8b}{%
+           family={Bellomo},
+           familyi={B\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddba29cc9e2c3fb3a9d8f1489946ca62}{%
+           family={Bernal},
+           familyi={B\bibinitperiod},
+           given={José\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9f1e337f284e0bc38f9f6ad85a4a200}{%
+           family={Scelfo},
+           familyi={S\bibinitperiod},
+           given={Giulio},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56ded927c7a208962f71febf25063927}{%
+           family={Raccanelli},
+           familyi={R\bibinitperiod},
+           given={Alvise},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1d06a928b4397fd26aa8b82f6d19c2a}{%
+           family={Verde},
+           familyi={V\bibinitperiod},
+           given={Licia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7d0598feff759b53ba6b01e66c8cf873}
+      \strng{fullhash}{f483dda6aaf4621ba1cf7f910483a2b6}
+      \strng{bibnamehash}{7d0598feff759b53ba6b01e66c8cf873}
+      \strng{authorbibnamehash}{7d0598feff759b53ba6b01e66c8cf873}
+      \strng{authornamehash}{7d0598feff759b53ba6b01e66c8cf873}
+      \strng{authorfullhash}{f483dda6aaf4621ba1cf7f910483a2b6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In the era of precision cosmology, establishing the correct magnitude of statistical errors in cosmological parameters is of crucial importance. However, widely used approximations in galaxy surveys analyses can lead to parameter uncertainties that are grossly mis-estimated, even in a regime where the theory is well understood (e.g., linear scales). These approximations can be introduced at three different levels: in the form of the likelihood, in the theoretical modelling of the observable and in the numerical computation of the observable. Their consequences are important both in data analysis through e.g., Markov Chain Monte Carlo parameter inference, and when survey instrument and strategy are designed and their constraining power on cosmological parameters is forecasted, for instance using Fisher matrix analyses. In this work, considering the galaxy angular power spectrum as the target observable, we report one example of approximation for each of such three categories: neglecting off-diagonal terms in the covariance matrix, neglecting cosmic magnification and using the Limber approximation on large scales. We show that these commonly used approximations affect the robustness of the analysis and lead, perhaps counter-intuitively, to unacceptably large mis-estimates of parameters errors (from few{\textasciitilde}\$10{\textbackslash}\%\$ up to few{\textasciitilde}\$100{\textbackslash}\%\$) and correlations. Furthermore, these approximations might even spoil the benefits of the nascent multi-tracer and multi-messenger cosmology. Hence we recommend that the type of analysis presented here should be repeated for every approximation adopted in survey design or data analysis, to quantify how it may affect the results. To this aim, we have developed {\textbackslash}texttt\{Multi{\textbackslash}\_CLASS\}, a new extension of {\textbackslash}texttt\{{CLASS}\} that includes the angular power spectrum for multiple (galaxy and other tracers such as gravitational waves) populations.}
+      \field{day}{6}
+      \field{eprinttype}{arxiv}
+      \field{issn}{1475-7516}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{month}{10}
+      \field{number}{10}
+      \field{shortjournal}{J. Cosmol. Astropart. Phys.}
+      \field{shorttitle}{Beware of commonly used approximations I}
+      \field{title}{Beware of commonly used approximations I: errors in forecasts}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2023}
+      \field{volume}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{016\bibrangedash 016}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2020/10/016
+      \endverb
+      \verb{eprint}
+      \verb 2005.10384 [astro-ph]
+      \endverb
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/Y5FSZBH6/Bellomo et al. - 2020 - Beware of commonly used approximations I errors i.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/UHQDBYVJ/2005.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2005.10384
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2005.10384
+      \endverb
+      \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics}
+    \endentry
     \entry{blas_cosmic_2011}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=7c8bf385e0343a63ecd10081c79ce911}{%
@@ -2257,8 +2338,8 @@
       \strng{authorbibnamehash}{99c1255b62132f55d52790b38871c39c}
       \strng{authornamehash}{99c1255b62132f55d52790b38871c39c}
       \strng{authorfullhash}{99c1255b62132f55d52790b38871c39c}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2317,8 +2398,8 @@
       \strng{authorbibnamehash}{82081f29093ef57de6a5a17676896413}
       \strng{authornamehash}{82081f29093ef57de6a5a17676896413}
       \strng{authorfullhash}{82081f29093ef57de6a5a17676896413}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -12029,10 +12110,22 @@
       \keyw{General Relativity and Quantum Cosmology,Astrophysics}
     \endentry
     \entry{the_ligo_scientific_collaboration_population_2022}{misc}{}
-      \name{author}{1635}{}{%
-        {{un=0,uniquepart=base,hash=58b081db5b81356520cf5edfbbe61493}{%
-           family={{The {LIGO} Scientific Collaboration and the Virgo Collaboration and the {KAGRA} Collaboration}},
+      \name{author}{1637}{}{%
+        {{un=0,uniquepart=base,hash=43fb943f246bb019e177f566de36ca5e}{%
+           family={{The {LIGO} Scientific Collaboration}},
            familyi={T\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=166a227eef6d5c46b27a4056a29e8bc1}{%
+           family={Virgo\bibnamedelima Collaboration},
+           familyi={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           prefix={the},
+           prefixi={t\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=b16cc561fa908c50e7e80c5bbcaa3d46}{%
+           family={{KAGRA}\bibnamedelima Collaboration},
+           familyi={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           prefix={the},
+           prefixi={t\bibinitperiod},
+           prefixun=0}}%
         {{un=0,uniquepart=base,hash=f8be78180236e580afcca88ecf22498d}{%
            family={Abbott},
            familyi={A\bibinitperiod},
@@ -21865,12 +21958,12 @@
       \list{publisher}{1}{%
         {arXiv}%
       }
-      \strng{namehash}{c088b8326e31dc93e79d561664a4e3a4}
-      \strng{fullhash}{c2f67f402fb923cffa85f7b605c7f6b3}
-      \strng{bibnamehash}{c088b8326e31dc93e79d561664a4e3a4}
-      \strng{authorbibnamehash}{c088b8326e31dc93e79d561664a4e3a4}
-      \strng{authornamehash}{c088b8326e31dc93e79d561664a4e3a4}
-      \strng{authorfullhash}{c2f67f402fb923cffa85f7b605c7f6b3}
+      \strng{namehash}{edaf4a2d441a1ed3b1b7b79a4e8e6756}
+      \strng{fullhash}{e225e7553966a5cbef022434e1193c12}
+      \strng{bibnamehash}{edaf4a2d441a1ed3b1b7b79a4e8e6756}
+      \strng{authorbibnamehash}{edaf4a2d441a1ed3b1b7b79a4e8e6756}
+      \strng{authornamehash}{edaf4a2d441a1ed3b1b7b79a4e8e6756}
+      \strng{authorfullhash}{e225e7553966a5cbef022434e1193c12}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{extradatescope}{labelyear}
@@ -28163,8 +28256,8 @@
       \strng{authorbibnamehash}{c3ba3549acba66154a7575487d6d1e89}
       \strng{authornamehash}{c3ba3549acba66154a7575487d6d1e89}
       \strng{authorfullhash}{da94a746e2346d677640e36babaa4e79}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -28338,87 +28431,6 @@
       \verb http://arxiv.org/abs/1803.01944
       \endverb
       \keyw{General Relativity and Quantum Cosmology,Astrophysics - High Energy Astrophysical Phenomena}
-    \endentry
-    \entry{bellomo_beware_2020}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=6b8a3dd1510f261468c9559595041f8b}{%
-           family={Bellomo},
-           familyi={B\bibinitperiod},
-           given={Nicola},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ddba29cc9e2c3fb3a9d8f1489946ca62}{%
-           family={Bernal},
-           familyi={B\bibinitperiod},
-           given={José\bibnamedelima Luis},
-           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b9f1e337f284e0bc38f9f6ad85a4a200}{%
-           family={Scelfo},
-           familyi={S\bibinitperiod},
-           given={Giulio},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=56ded927c7a208962f71febf25063927}{%
-           family={Raccanelli},
-           familyi={R\bibinitperiod},
-           given={Alvise},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e1d06a928b4397fd26aa8b82f6d19c2a}{%
-           family={Verde},
-           familyi={V\bibinitperiod},
-           given={Licia},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{7d0598feff759b53ba6b01e66c8cf873}
-      \strng{fullhash}{f483dda6aaf4621ba1cf7f910483a2b6}
-      \strng{bibnamehash}{7d0598feff759b53ba6b01e66c8cf873}
-      \strng{authorbibnamehash}{7d0598feff759b53ba6b01e66c8cf873}
-      \strng{authornamehash}{7d0598feff759b53ba6b01e66c8cf873}
-      \strng{authorfullhash}{f483dda6aaf4621ba1cf7f910483a2b6}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{In the era of precision cosmology, establishing the correct magnitude of statistical errors in cosmological parameters is of crucial importance. However, widely used approximations in galaxy surveys analyses can lead to parameter uncertainties that are grossly mis-estimated, even in a regime where the theory is well understood (e.g., linear scales). These approximations can be introduced at three different levels: in the form of the likelihood, in the theoretical modelling of the observable and in the numerical computation of the observable. Their consequences are important both in data analysis through e.g., Markov Chain Monte Carlo parameter inference, and when survey instrument and strategy are designed and their constraining power on cosmological parameters is forecasted, for instance using Fisher matrix analyses. In this work, considering the galaxy angular power spectrum as the target observable, we report one example of approximation for each of such three categories: neglecting off-diagonal terms in the covariance matrix, neglecting cosmic magnification and using the Limber approximation on large scales. We show that these commonly used approximations affect the robustness of the analysis and lead, perhaps counter-intuitively, to unacceptably large mis-estimates of parameters errors (from few{\textasciitilde}\$10{\textbackslash}\%\$ up to few{\textasciitilde}\$100{\textbackslash}\%\$) and correlations. Furthermore, these approximations might even spoil the benefits of the nascent multi-tracer and multi-messenger cosmology. Hence we recommend that the type of analysis presented here should be repeated for every approximation adopted in survey design or data analysis, to quantify how it may affect the results. To this aim, we have developed {\textbackslash}texttt\{Multi{\textbackslash}\_CLASS\}, a new extension of {\textbackslash}texttt\{{CLASS}\} that includes the angular power spectrum for multiple (galaxy and other tracers such as gravitational waves) populations.}
-      \field{day}{6}
-      \field{eprinttype}{arxiv}
-      \field{issn}{1475-7516}
-      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
-      \field{month}{10}
-      \field{number}{10}
-      \field{shortjournal}{J. Cosmol. Astropart. Phys.}
-      \field{shorttitle}{Beware of commonly used approximations I}
-      \field{title}{Beware of commonly used approximations I: errors in forecasts}
-      \field{urlday}{10}
-      \field{urlmonth}{8}
-      \field{urlyear}{2023}
-      \field{volume}{2020}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{016\bibrangedash 016}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1475-7516/2020/10/016
-      \endverb
-      \verb{eprint}
-      \verb 2005.10384 [astro-ph]
-      \endverb
-      \verb{file}
-      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/Y5FSZBH6/Bellomo et al. - 2020 - Beware of commonly used approximations I errors i.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/UHQDBYVJ/2005.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/2005.10384
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/2005.10384
-      \endverb
-      \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
     \entry{scelfo_gwtimeslss_2018}{article}{}
       \name{author}{5}{}{%
@@ -30343,8 +30355,8 @@
       \strng{authorbibnamehash}{cead1e8affef7f98825bbdcab83a0e48}
       \strng{authornamehash}{cead1e8affef7f98825bbdcab83a0e48}
       \strng{authorfullhash}{579e54f568ed546a1edcd7dcb60a261e}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -30513,8 +30525,8 @@
       \strng{authorbibnamehash}{0aac24c354c8b627b6045737d580591a}
       \strng{authornamehash}{0aac24c354c8b627b6045737d580591a}
       \strng{authorfullhash}{e4cbe03fa67d01973453504549d7eef6}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -30743,10 +30755,300 @@
       \endverb
       \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics,General Relativity and Quantum Cosmology}
     \endentry
+    \entry{enslin_information_2013}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00125ffdbb132bd8d05940cd830990e7}{%
+           family={Enßlin},
+           familyi={E\bibinitperiod},
+           given={Torsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00125ffdbb132bd8d05940cd830990e7}
+      \strng{fullhash}{00125ffdbb132bd8d05940cd830990e7}
+      \strng{bibnamehash}{00125ffdbb132bd8d05940cd830990e7}
+      \strng{authorbibnamehash}{00125ffdbb132bd8d05940cd830990e7}
+      \strng{authornamehash}{00125ffdbb132bd8d05940cd830990e7}
+      \strng{authorfullhash}{00125ffdbb132bd8d05940cd830990e7}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Non-linear image reconstruction and signal analysis deal with complex inverse problems. To tackle such problems in a systematic way, I present information field theory ({IFT}) as a means of Bayesian, data based inference on spatially distributed signal fields. {IFT} is a statistical field theory, which permits the construction of optimal signal recovery algorithms even for non-linear and non-Gaussian signal inference problems. {IFT} algorithms exploit spatial correlations of the signal fields and benefit from techniques developed to investigate quantum and statistical field theories, such as Feynman diagrams, re-normalisation calculations, and thermodynamic potentials. The theory can be used in many areas, and applications in cosmology and numerics are presented.}
+      \field{eprinttype}{arxiv}
+      \field{title}{Information field theory}
+      \field{urlday}{12}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{184\bibrangedash 191}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1063/1.4819999
+      \endverb
+      \verb{eprint}
+      \verb 1301.2556 [astro-ph, physics:physics, stat]
+      \endverb
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/2W6ADESK/Enßlin - 2013 - Information field theory.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/TA5STKCR/1301.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1301.2556
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1301.2556
+      \endverb
+      \keyw{Astrophysics - Instrumentation and Methods for Astrophysics,Computer Science - Information Theory,Physics - Data Analysis,Statistics and Probability,Statistics - Machine Learning}
+    \endentry
+    \entry{sathyaprakash_physics_2009}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4e5450189c3386a750421114d175c24c}{%
+           family={Sathyaprakash},
+           familyi={S\bibinitperiod},
+           given={B.\bibnamedelimi S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5c305b7dabc35e30563405059b93e3f}{%
+           family={Schutz},
+           familyi={S\bibinitperiod},
+           given={B.\bibnamedelimi F.},
+           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4086a30158339c989114b290ee82e10f}
+      \strng{fullhash}{4086a30158339c989114b290ee82e10f}
+      \strng{bibnamehash}{4086a30158339c989114b290ee82e10f}
+      \strng{authorbibnamehash}{4086a30158339c989114b290ee82e10f}
+      \strng{authornamehash}{4086a30158339c989114b290ee82e10f}
+      \strng{authorfullhash}{4086a30158339c989114b290ee82e10f}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Gravitational wave detectors are already operating at interesting sensitivity levels, and they have an upgrade path that should result in secure detections by 2014. We review the physics of gravitational waves, how they interact with detectors (bars and interferometers), and how these detectors operate. We study the most likely sources of gravitational waves and review the data analysis methods that are used to extract their signals from detector noise. Then we consider the consequences of gravitational wave detections and observations for physics, astrophysics, and cosmology.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{2367-3613, 1433-8351}
+      \field{journaltitle}{Living Reviews in Relativity}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{Living Rev. Relativ.}
+      \field{title}{Physics, Astrophysics and Cosmology with Gravitational Waves}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{volume}{12}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.12942/lrr-2009-2
+      \endverb
+      \verb{eprint}
+      \verb 0903.0338 [astro-ph, physics:gr-qc]
+      \endverb
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/6EW4BT3J/Sathyaprakash and Schutz - 2009 - Physics, Astrophysics and Cosmology with Gravitati.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/WW5KERFZ/0903.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0903.0338
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0903.0338
+      \endverb
+      \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics,General Relativity and Quantum Cosmology,Astrophysics - High Energy Astrophysical Phenomena,Astrophysics - Instrumentation and Methods for Astrophysics}
+    \endentry
+    \entry{selig_nifty_2013}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=52030f2286f40837cacf41acf27f810f}{%
+           family={Selig},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58085cba4de18915c78425b7e0a848ed}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5ffc019f0c508611ad810d35841bf95}{%
+           family={Junklewitz},
+           familyi={J\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7f39ef2c8199f9f9b6d0081e4d9bbcc}{%
+           family={Oppermann},
+           familyi={O\bibinitperiod},
+           given={Niels},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e31e9ca16950ddb0b61f4bcc820416a7}{%
+           family={Reinecke},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49669de1c7c5cc0a21acbc1fba829490}{%
+           family={Greiner},
+           familyi={G\bibinitperiod},
+           given={Maksim},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92570beff62ebb19bee52e5c477002de}{%
+           family={Pachajoa},
+           familyi={P\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0f310d83b694218389b14eceeef4e58}{%
+           family={Enßlin},
+           familyi={E\bibinitperiod},
+           given={Torsten\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e8b158c20cd8cab71c8cc0ba07815d9b}
+      \strng{fullhash}{20b61d3ff8dccae737ea43a6f68fba7d}
+      \strng{bibnamehash}{e8b158c20cd8cab71c8cc0ba07815d9b}
+      \strng{authorbibnamehash}{e8b158c20cd8cab71c8cc0ba07815d9b}
+      \strng{authornamehash}{e8b158c20cd8cab71c8cc0ba07815d9b}
+      \strng{authorfullhash}{20b61d3ff8dccae737ea43a6f68fba7d}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{NIFTY}, "Numerical Information Field Theory", is a software package designed to enable the development of signal inference algorithms that operate regardless of the underlying spatial grid and its resolution. Its object-oriented framework is written in Python, although it accesses libraries written in Cython, C++, and C for efficiency. {NIFTY} offers a toolkit that abstracts discretized representations of continuous spaces, fields in these spaces, and operators acting on fields into classes. Thereby, the correct normalization of operations on fields is taken care of automatically without concerning the user. This allows for an abstract formulation and programming of inference algorithms, including those derived within information field theory. Thus, {NIFTY} permits its user to rapidly prototype algorithms in 1D, and then apply the developed code in higher-dimensional settings of real world problems. The set of spaces on which {NIFTY} operates comprises point sets, n-dimensional regular grids, spherical spaces, their harmonic counterparts, and product spaces constructed as combinations of those. The functionality and diversity of the package is demonstrated by a Wiener filter code example that successfully runs without modification regardless of the space on which the inference problem is defined.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{0004-6361, 1432-0746}
+      \field{journaltitle}{Astronomy \& Astrophysics}
+      \field{month}{6}
+      \field{shortjournal}{A\&A}
+      \field{title}{{NIFTY} - Numerical Information Field Theory - a versatile Python library for signal inference}
+      \field{urlday}{18}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{volume}{554}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{A26}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1051/0004-6361/201321236
+      \endverb
+      \verb{eprint}
+      \verb 1301.4499 [astro-ph, physics:math-ph, physics:physics, stat]
+      \endverb
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/felic/snap/zotero-snap/common/Zotero/storage/NTCML68K/Selig et al. - 2013 - NIFTY - Numerical Information Field Theory - a ver.pdf:application/pdf;arXiv.org Snapshot:/home/felic/snap/zotero-snap/common/Zotero/storage/7YC6KFSB/1301.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1301.4499
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1301.4499
+      \endverb
+      \keyw{Astrophysics - Instrumentation and Methods for Astrophysics,Computer Science - Information Theory,Physics - Data Analysis,Statistics and Probability,Computer Science - Mathematical Software,Mathematical Physics,Statistics - Computation}
+    \endentry
+    \entry{gorski_healpix_2005}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=39c85f332b64c78bebbfd07d143f27a8}{%
+           family={Gorski},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd44eacd36cd07f70a26bcd344209e22}{%
+           family={Hivon},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3d862cbc08a419afdc99977d27338bc}{%
+           family={Banday},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=889a1896f2e2b2b3b3e5e5d23ae13c72}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7aebafad76356ba7f0dbf60e86b20b64}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi K.},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=949f3cbf08e30a3269ac344cef603e79}{%
+           family={Reinecke},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2a2f542a4b2c906fdfae0edc151364a}{%
+           family={Bartelmann},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f57cd95cb2140f6bd9aa47184615ee05}
+      \strng{fullhash}{19bc0204891e45ed6acab7428cee7ce8}
+      \strng{bibnamehash}{f57cd95cb2140f6bd9aa47184615ee05}
+      \strng{authorbibnamehash}{f57cd95cb2140f6bd9aa47184615ee05}
+      \strng{authornamehash}{f57cd95cb2140f6bd9aa47184615ee05}
+      \strng{authorfullhash}{19bc0204891e45ed6acab7428cee7ce8}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0004-637X, 1538-4357}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{shortjournal}{{ApJ}}
+      \field{shorttitle}{{HEALPix}}
+      \field{title}{{HEALPix}: A Framework for High‐Resolution Discretization and Fast Analysis of Data Distributed on the Sphere}
+      \field{urlday}{16}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{volume}{622}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{759\bibrangedash 771}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1086/427976
+      \endverb
+      \verb{file}
+      \verb Submitted Version:/home/felic/snap/zotero-snap/common/Zotero/storage/4VP8DHIU/Gorski et al. - 2005 - HEALPix A Framework for High‐Resolution Discretiz.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1086/427976
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1086/427976
+      \endverb
+    \endentry
   \enddatalist
-  \missing{healpix}
-  \missing{todo}
-  \missing{todo satyaprakash}
 \endrefsection
 \endinput
 

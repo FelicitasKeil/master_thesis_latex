@@ -1,0 +1,89 @@
+\documentclass[twoside, 11pt, English, openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,bindingoffset=0.3in,%
+            left=1in,right=1in,top=0.1in,bottom=0in]{geometry}
+\usepackage[sorting=none, style=numeric]{biblatex} 
+\addbibresource{GWBG_Master.bib}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyhdr} % header package
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\usepackage[colorlinks=true,linkcolor=ForestGreen, citecolor=ForestGreen]{hyperref}%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tocloft}
+\usepackage{subfig}
+\usepackage{textcomp}
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{url} %url line breaks
+\usepackage{titlesec}
+% \titleformat{\chapter}[display]
+%   {\normalfont\bfseries}{}{0pt}{\Huge}
+\let\chaptername\relax
+\def\UrlBreaks{\do\/\do-}
+\pagestyle{plain}
+\renewcommand{\baselinestretch}{1}
+\setlength\headheight{20pt}
+\addtolength{\textheight}{-80.0pt} 
+\hypersetup{urlcolor=ForestGreen}
+            
+\fancyhead[R]{
+    \setlength{\unitlength}{1in}
+    \begin{picture}(3.8,1.6)
+        \put(0,0){
+        \includegraphics[width=11.5cm]{Images/rwth_ttk_en_rgb_big.jpg}
+        \label{TTK_logo}}
+    \end{picture}
+}
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+%\frontmatter
+\begin{titlepage}
+    %\thispagestyle{fancy}
+    \pagenumbering{gobble}
+    \begin{spacing}{1.5}
+        \color{white}
+        A \\
+        \color{black}
+    \begin{center}
+        \vspace{3cm}
+        \noindent\rule{6cm}{0.4pt} \\
+       {\LARGE \textbf{ Component Separation of the \\ 
+       \vspace{0.5cm}
+      Gravitational Wave Background}}
+        \noindent\rule{6cm}{0.4pt} \\
+        %\textbf{Separating unclassified 4FGL Blazars into FSRQ and BL Lac}
+        
+       \vspace{1cm}
+       \large{\textbf{Felicitas Keil}} \\
+       \vspace{3cm}        
+       \textit{A thesis presented for the degree of\\
+       Master of Science in Physics}
+            
+       \vspace{0.8cm}
+       \small{The present work was submitted to the \\
+        Institute for Theoretical Particle Physics and Cosmology (TTK)\\
+       Faculty of Mathematics, Computer Science and Natural Sciences \\
+       RWTH Aachen University\\
+       Germany\\
+       }
+       \vspace{3cm}
+       \textit{Supervision} \\
+       \large{Prof. Dr. Philipp Mertsch \\
+       Prof. Dr. Julien Lesgourgues \\
+       }
+       \vspace{1cm}
+       \small{Aachen, October $19^{th}$, 2023}
+       \vspace{-2cm}
+    \end{center}
+    \end{spacing}
+\end{titlepage}
+
+\end{document}

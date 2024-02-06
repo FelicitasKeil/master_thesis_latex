@@ -31,3 +31,25 @@
     \begin{equation}
             \vec{v} = \vec{\nabla} V 
     \end{equation}
+
+
+
+    To get the Hamiltonian density, we introduce the conjugate momentum field $\pi_{ij}$.
+
+\begin{equation}
+    \pi_{ij}=\dot{h}_{ij}-\delta_{ij}\dot{h}_{kk}+2\delta_{ij}\partial_k
+N_k-\partial_i N_j-\partial_j N_i 
+\end{equation}
+
+This contains the auxiliary fields $N_0=-h_{00}$ and $N_i=h_{0i}$. The Lagrangian from the Einstein-Hilbert action depends on $h_{\mu\nu}$ and the stress-energy tensor $T_{\mu\nu}$. 
+
+\begin{equation}
+    \mathcal{L}[h]=-\frac{1}{2}(\partial_\lambda \underline{h}_{\mu\nu} \partial^\lambda \underline{h}^{\mu\nu}+\kappa \underline{h}^{\mu\nu}T_{\mu\nu})
+\end{equation}
+From the Lagrangian, we can calculate the Hamiltonian.
+\begin{equation}
+    \mathcal{H}=\partial_t \underline{h}^{\mu\nu}\pi_{\mu\nu}-\mathcal{L}[h]
+\end{equation}
+\begin{equation}
+    =\frac{1}{2}\pi_{\mu\nu}^2\frac{1}{2}(\nabla h_{\mu\nu})^2-\kappa \underline{h}^{\mu\nu}T_{\mu\nu}
+\end{equation}
